@@ -1,0 +1,408 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>安徽慕界网络科技有限公司</title>
+<link href="css/whir_common.css" rel="stylesheet" type="text/css" />
+<link href="css/whir_style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="script/jquery.min.js"></script>
+<!--[if IE 6]>
+<script type="text/javascript" src="script/iepng.js"></script>
+<script type="text/javascript"> 
+EvPNG.fix('img,.content,.svc-payment,.svc-gathering,.svc-weg,.svc-tx,.svc-credit,.svc-aa,.svc-donate,.svc-mobile,.svc-escore,.svc-rent,.svc-cashgift,.con,.aoff,'); </script>
+<![endif]-->
+</head>
+<body class="body">
+<!--头部-->
+<div id="header">
+  <div class="top">
+    <div class="topmain">
+      <div class="searchbox">
+        <div class="so_so">
+          <div class="logo"><a href="#" title="目课网"><img src="images/logo.jpg" / alt="目课网"></a></div>
+          <div class="mk_so">
+            <input type="text" class="input"  name=""/>
+            <input type="image" src="images/btn.jpg" class="btn" />
+          </div>
+        </div>
+        <div class="topmenu">
+          <div class="xsyd"><a href="#" target="_blank">新手引导</a></div>
+          <div class="hylist">
+            <ul>
+              <li class="li1"><a href="个人中心-信息完善.html">会员</a></li>
+              <li class="li2"><a href="javascript:void(0);" onclick="showA();">注册</a>/<a href="javascript:void(0);" onclick="showB();">登陆</a></li>
+              <li class="li3"><a href="#">APP下载</a></li>
+              <li class="li4"><a href="#">收藏我们</a></li>
+            </ul>
+          </div>
+          <!--注册登录隐藏--->
+          <div id="pop" class="pop" style="display:none">
+            <div class="pop_head"><a href="javascript:void(0);" onclick="hideA()">关闭</a></div>
+            <div class="pop_body">
+              <h1>用户注册</h1>
+              <div class="zhuce">
+                <input type="text" class="inputl" value="请输入真实邮箱" onFocus="this.value='';" onBlur="if(this.value==''){this.value='请输入真实邮箱';}" />
+                <input type="text" class="inputr" value="请输入用户名" onFocus="this.value='';" onBlur="if(this.value==''){this.value='请输入用户名';}" />
+                <input type="password" class="inputb" value="请输入密码" onFocus="this.value='';" onBlur="if(this.value==''){this.value='请输入密码';}" />
+                <div class="dlk"><a href="#" class="regist">注册</a><a href="#" class="login">返回登录</a></div>
+              </div>
+            </div>
+          </div>
+          <div id="pop1" class="pop1" style="display:none">
+            <div class="pop_head1"><a href="javascript:void(expression);" onclick="hideB()">关闭</a></div>
+            <div class="pop_body1">
+              <h1>用户登陆</h1>
+              <div class="zhuce">
+                <input type="text" class="inputr" value="请输入用户名"  onFocus="this.value='';" onBlur="if(this.value==''){this.value='请输入用户名';}"/>
+                <input type="password" class="inputb" value="请输入密码" onFocus="this.value='';" onBlur="if(this.value==''){this.value='请输入密码';}" />
+                <div class="dlk"><a href="#" class="regist">登陆</a><a href="#" class="login">注册</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--菜单导航-->
+      <div class="topnavmenu">
+        <div class="nav">
+          <ul>
+            <li><a href="index.html" class="on">首页</a></li>
+            <li><a href="中学时代.html">中学时代</a></li>
+            <li><a href="#">翻转课堂</a></li>
+            <li><a href="大学主页.html">大学时代</a></li>
+            <li><a href="大学主页.html">高校慕课</a></li>
+            <li><a href="大学主页.html">职业培训</a></li>
+            <li><a href="企业主页.htmll">企业培训</a></li>
+            <li><a href="#">综合视频</a></li>
+            <li><a href="课件超市.html">课件超市</a></li>
+          </ul>
+        </div>
+        <div class="question">
+          <ul>
+            <li class="li5"><a href="#">我要开班</a></li>
+            <li class="li6"><a href="个人中心-我的提问.html">我要提问</a></li>
+            <li class="li7"><a href="个人中心-我的回答.html">我要问答</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="submenu">
+  <div class="menulist">
+    <ul>
+      <li><a href="#" class="on">热门专区</a></li>
+      <li><a href="#">中考专区</a></li>
+      <li><a href="#">难题巧解</a></li>
+      <li><a href="#">名师授课</a></li>
+      <li><a href="#">火箭班级</a></li>
+      <li><a href="#">高考精品课</a></li>
+      <li><a href="#">备考辅导</a></li>
+      <li><a href="#">艺术类高考</a></li>
+      <li><a href="#">高考微冲电</a></li>
+      <li><a href="#">志愿填报</a></li>
+    </ul>
+  </div>
+</div>
+<div class="clear"></div>
+<!--视频宣传-->
+<div class="Aflash">
+  <ul class="picUL">
+    <li class="picLI" id="j-focusPic">
+      <div class="picbox j-slider" style="left: -22310px;"> <span class="j-item"> <a target="_blank" href="#" title="《隋唐英雄》更新至47集:程咬金裴翠翠闹洞房"> <img width="1190" src="images/flash.jpg"></a></span> <span class="j-item"> <a target="_blank" href="#" title="【高清正片】战神重组 为战重生：《敢死队2》"> <img width="1190" src="images/flash.jpg" data-src="images/flash.jpg" class="loading"></a></span> <span class="j-item"> <a target="_blank" href="#" title="【独家热播】《虎符传奇》更新至14集"> <img width="1190" src="images/flash.jpg" data-src="images/flash.jpg" class="loading"></a></span> <span class="j-item"> <a target="_blank" href="#" title="【首播预告】《我怀了你的孩子》预告片激情上线"> <img width="1190" src="images/flash.jpg" data-src="images/flash.jpg" class="loading"></a></span> <span class="j-item"> <a target="_blank" href="#" title="盘点2012那些吓得末日都不敢来的神人"> <img width="1190" src="images/flash.jpg" data-src="images/flash.jpg" class="loading"></a></span> <span class="j-item"> <a target="_blank" href="#" title="【独播动画】《刀剑神域》23:05与海外同步播出结局"> <img width="1190" src="images/flash.jpg" data-src="images/flash.jpg" class="loading"></a></span> <span class="j-item"> <a target="_blank" href="#" title="【高清热播】《民兵葛二蛋》更新至20集"> <img width="1190" src="images/flash.jpg" data-src="images/flash.jpg" class="loading"></a></span> <span class="j-item"> <a target="_blank" href="#" title="【高清正片】亚洲版“人皮客栈”：《惊魂游戏》"> <img width="1190" src="images/flash.jpg" data-src="images/flash.jpg" class="loading"></a></span> <span class="j-item"> <a target="_blank" href="#" title="【足球直播】直播意甲、西甲2012收官焦点战"> <img width="1190" src="images/flash.jpg" data-src="images/flash.jpg" class="loading"></a></span> <span class="j-item"> <a target="_blank" href="#" title="微电影《青春不下线》发布，解冻你的青春！"> <img width="1190" src="images/flash.jpg" data-src="images/flash.jpg" class="loading"></a></span> <span class="j-item"> <a target="_blank" href="#" title="《隋唐英雄》更新至47集:程咬金裴翠翠闹洞房"> <img width="1190" src="images/flash.jpg" data-src="images/flash.jpg"></a></span> <span class="j-item"> <a target="_blank" href="#" title="【高清正片】战神重组 为战重生：《敢死队2》"> <img width="1190" src="images/flash.jpg" data-src="images/flash.jpg" class="loading"></a></span> <span class="j-item"> <a target="_blank" href="#" title="【独家热播】《虎符传奇》更新至14集"> <img width="1190" src="images/flash.jpg" data-src="images/flash.jpg" class="loading"></a></span> <span class="j-item"> <a target="_blank" href="#" title="【首播预告】《我怀了你的孩子》预告片激情上线"> <img width="1190" src="images/flash.jpg" data-src="images/flash.jpg" class="loading"></a></span> <span class="j-item"> <a target="_blank" href="#" title="盘点2012那些吓得末日都不敢来的神人"> <img width="1190" src="images/flash.jpg" data-src="images/flash.jpg" class="loading"></a></span> <span class="j-item"> <a target="_blank" href="#" title="【独播动画】《刀剑神域》23:05与海外同步播出结局"> <img width="1190" src="images/flash.jpg" data-src="images/flash.jpg" class="loading"></a></span> <span class="j-item"> <a target="_blank" href="#" title="【高清热播】《民兵葛二蛋》更新至20集"> <img width="1190" src="images/flash.jpg" data-src="images/flash.jpg" class="loading"></a></span> <span class="j-item"> <a target="_blank" href="#" title="【高清正片】亚洲版“人皮客栈”：《惊魂游戏》"> <img width="1190" src="images/flash.jpg" data-src="images/flash.jpg" class="loading"></a></span> <span class="j-item"> <a target="_blank" href="#" title="【足球直播】直播意甲、西甲2012收官焦点战"> <img width="1190" src="images/flash.jpg" data-src="images/flash.jpg" class="loading"></a></span> <span class="j-item"> <a target="_blank" href="#" title="微电影《青春不下线》发布，解冻你的青春！"> <img width="1190" src="images/flash.jpg" data-src="images/flash.jpg" class="loading"></a></span><span class="j-item"> <a target="_blank" href="#" title="《隋唐英雄》更新至47集:程咬金裴翠翠闹洞房"> <img width="1190" src="images/flash.jpg" data-src="images/flash.jpg" class="loading"></a> </span> <span class="j-item"> <a target="_blank" href="#" title="【高清正片】战神重组 为战重生：《敢死队2》"> <img width="1190" src="images/flash.jpg" data-src="images/flash.jpg" class="loading"></a></span> <span class="j-item"> <a target="_blank" href="#" title="【独家热播】《虎符传奇》更新至14集"> <img width="1190" src="images/flash.jpg" data-src="images/flash.jpg" class="loading"></a></span> <span class="j-item"> <a target="_blank" href="#" title="【首播预告】《我怀了你的孩子》预告片激情上线"> <img width="1190" src="images/flash.jpg" data-src="images/flash.jpg" class="loading"></a></span> <span class="j-item"> <a target="_blank" href="#" title="盘点2012那些吓得末日都不敢来的神人"> <img width="1190" src="images/flash.jpg" data-src="images/flash.jpg" class="loading"></a></span> <span class="j-item"> <a target="_blank" href="#" title="【独播动画】《刀剑神域》23:05与海外同步播出结局"> <img width="1190" src="images/flash.jpg" data-src="images/flash.jpg" class="loading"></a></span> <span class="j-item"> <a target="_blank" href="#" title="【高清热播】《民兵葛二蛋》更新至20集"> <img width="1190" src="images/flash.jpg" data-src="images/flash.jpg" class="loading"></a></span> <span class="j-item"> <a target="_blank" href="#" title="【高清正片】亚洲版“人皮客栈”：《惊魂游戏》"> <img width="1190" src="images/flash.jpg" data-src="images/flash.jpg" class="loading"></a></span> <span class="j-item"> <a target="_blank" href="#" title="【足球直播】直播意甲、西甲2012收官焦点战"> <img width="1190" src="images/flash.jpg" data-src="images/flash.jpg" class="loading"></a></span> <span class="j-item"> <a target="_blank" href="#" title="微电影《青春不下线》发布，解冻你的青春！"> <img width="1190" src="images/flash.jpg" data-src="images/flash.jpg" class="loading"></a></span></div>
+      <div class="bg j-infobg" style="opacity: 0.5;"></div>
+      <div class="info j-info" style="display: block;">
+        <div class="infotxt w">
+          <h2><a target="_blank" href="#" title="【首播预告】《我怀了你的孩子》预告片激情上线">【首播预告】《我怀了你的孩子》预告片激情上线</a></h2>
+          <p><a target="_blank" href="#" title="【首播预告】《我怀了你的孩子》预告片激情上线">你是我的爸爸，也是我的情人。小女孩纠缠老男人，四角恋情玩弄了谁？乐视网开年大戏《我怀了你的孩子》1月1日震撼首播！</a></p>
+        </div>
+      </div>
+      <div class="info j-infocontainer" style="display:none;">
+        <div class="infotxt w">
+          <h2><a target="_blank" href="#" title="《隋唐英雄》更新至47集:程咬金裴翠翠闹洞房">《隋唐英雄》更新至47集:程咬金裴翠翠闹洞房</a></h2>
+          <p><a target="_blank" href="http://tv.letv.com/zt/styx/index.shtml" title="《隋唐英雄》更新至47集:程咬金裴翠翠闹洞房">本剧剧情不拘泥于正史，而是分了宫廷和草莽两条线，故事庞大而人物精细，描绘出了一幅波澜壮阔的隋唐时代历史画卷。</a></p>
+        </div>
+        <div class="infotxt w">
+          <h2><a target="_blank" href="#" title="【高清正片】战神重组 为战重生：《敢死队2》">【高清正片】战神重组 为战重生：《敢死队2》</a></h2>
+          <p><a target="_blank" href="#" title="【高清正片】战神重组 为战重生：《敢死队2》">史泰龙率一众老牌硬汉再度集结，施瓦辛格、斯坦森、李连杰，阵容更为强悍，在新成员的帮助下，敢死队员们要为死去的同伴报仇，捍卫正义。</a></p>
+        </div>
+        <div class="infotxt w">
+          <h2><a target="_blank" href="#" title="【独家热播】《虎符传奇》更新至14集">【独家热播】《虎符传奇》更新至14集</a></h2>
+          <p><a target="_blank" href="#" title="【独家热播】《虎符传奇》更新至14集">该剧描写的是春秋战国时期四公子以及传奇女子如姬夫人之间讲诚信、重承诺，以生命的代价维护正义：不畏权势，慈悲悯弱的动人传说。</a></p>
+        </div>
+        <div class="infotxt w">
+          <h2><a target="_blank" href="#" title="【首播预告】《我怀了你的孩子》预告片激情上线">【首播预告】《我怀了你的孩子》预告片激情上线</a></h2>
+          <p><a target="_blank" href="#" title="【首播预告】《我怀了你的孩子》预告片激情上线">你是我的爸爸，也是我的情人。小女孩纠缠老男人，四角恋情玩弄了谁？乐视网开年大戏《我怀了你的孩子》1月1日震撼首播！</a></p>
+        </div>
+        <div class="infotxt w">
+          <h2><a target="_blank" href="#" title="盘点2012那些吓得末日都不敢来的神人">盘点2012那些吓得末日都不敢来的神人</a></h2>
+          <p><a target="_blank" href="#" title="盘点2012那些吓得末日都不敢来的神人">2012年全球最火的词儿当属“Style”，中文叫“范儿”。来吧！随我们一同领教在众“范儿”脱颖而出的“奇葩Style”！</a></p>
+        </div>
+        <div class="infotxt w">
+          <h2><a target="_blank" href="#" title="【独播动画】《刀剑神域》23:05与海外同步播出结局">【独播动画】《刀剑神域》23:05与海外同步播出结局</a></h2>
+          <p><a target="_blank" href="#" title="【独播动画】《刀剑神域》23:05与海外同步播出结局">乐视网动漫频道独家与海外同步播出，2012最具人气新番动画《刀剑神域》第25话大结局。经历重重磨难的桐人与亚丝娜最后的战斗！</a></p>
+        </div>
+        <div class="infotxt w">
+          <h2><a target="_blank" href="#" title="【高清热播】《民兵葛二蛋》更新至20集">【高清热播】《民兵葛二蛋》更新至20集</a></h2>
+          <p><a target="_blank" href="#" title="【高清热播】《民兵葛二蛋》更新至20集">两个农村里的小人物，在混乱的战争年代，成长的路程却大相径庭。从前的难兄难弟发展成了什么样的关系？且看黄渤高虎搞笑演绎！</a></p>
+        </div>
+        <div class="infotxt w">
+          <h2><a target="_blank" href="#" title="【高清正片】亚洲版“人皮客栈”：《惊魂游戏》">【高清正片】亚洲版“人皮客栈”：《惊魂游戏》</a></h2>
+          <p><a target="_blank" href="#" title="【高清正片】亚洲版“人皮客栈”：《惊魂游戏》">莫小棋饰演游戏公司的职员，而胡兵饰演其男友，因种种原因两人感情出现裂痕，连环怪事由此而生，并牵涉进他人命案。</a></p>
+        </div>
+        <div class="infotxt w">
+          <h2><a target="_blank" href="#" title="【足球直播】直播意甲、西甲2012收官焦点战">【足球直播】直播意甲、西甲2012收官焦点战</a></h2>
+          <p><a target="_blank" href="#" title="【足球直播】直播意甲、西甲2012收官焦点战">12月22日19:30，国米VS热那亚。12月23日01:00，巴拉多利德VS巴萨；3点马拉加VS皇马；3点45罗马VSAC米兰。乐视体育将三屏同步直播。</a></p>
+        </div>
+        <div class="infotxt w">
+          <h2><a target="_blank" href="#" title="微电影《青春不下线》发布，解冻你的青春！">微电影《青春不下线》发布，解冻你的青春！</a></h2>
+          <p><a target="_blank" href="#" title="微电影《青春不下线》发布，解冻你的青春！">青春校园VS残酷现实——网游玩家真实故事改编，直击80、90后的生存囧况！</a></p>
+        </div>
+      </div>
+    </li>
+  </ul>
+  <div class="infobtn" id="j-focusBtns">
+    <div class="pre on-1"><a href="javascript:void(0)"></a><i style="display:none"></i></div>
+    <div class="smalpic j-container">
+      <div class="smallbox j-slider" style="left: 0px;"> <a class="j-item" href="#" title="《隋唐英雄》更新至47集:程咬金裴翠翠闹洞房" target="_blank"> <img src="images/70a978cbc6a32efda5b1a4a0ce79bff1505.jpg" alt="《隋唐英雄》更新至47集:程咬金裴翠翠闹洞房"> <b></b></a> <a class="j-item" href="#" title="【高清正片】战神重组 为战重生：《敢死队2》" target="_blank"> <img src="images/3db3b6829c4d92879bd779a47b6d295b9517.jpg" alt="【高清正片】战神重组 为战重生：《敢死队2》"> <b></b></a> <a class="j-item" href="#" title="【独家热播】《虎符传奇》更新至14集" target="_blank"> <img src="images/9e0f213dc0b2539c5bc4c278b1e5944a7349.jpg" alt="【独家热播】《虎符传奇》更新至14集"> <b></b></a> <a class="j-item on" href="#" title="【首播预告】《我怀了你的孩子》预告片激情上线" target="_blank"> <img src="images/8723655c77e137e85b94c7a48475ac547016.jpg" alt="【首播预告】《我怀了你的孩子》预告片激情上线"> <b></b></a> <a class="j-item" href="#" title="盘点2012那些吓得末日都不敢来的神人" target="_blank"> <img src="images/5b035206fbaf15c6bd0724d9c4a4296a7097.jpg" alt="盘点2012那些吓得末日都不敢来的神人"> <b></b></a> <a class="j-item" href="#" title="【独播动画】《刀剑神域》23:05与海外同步播出结局" target="_blank"> <img src="images/662fda3e374751934e10953d99e0265e4384.jpg" alt="【独播动画】《刀剑神域》23:05与海外同步播出结局"> <b></b></a> <a class="j-item" href="#" title="【高清热播】《民兵葛二蛋》更新至20集" target="_blank"> <img src="images/20dc66194903de30aad5f37af9524071801.jpg" alt="【高清热播】《民兵葛二蛋》更新至20集"> <b></b></a> <a class="j-item" href="#" title="【高清正片】亚洲版“人皮客栈”：《惊魂游戏》" target="_blank"> <img src="images/52d72d1c5affd250250209f140b45f5a5237.jpg" alt="【高清正片】亚洲版“人皮客栈”：《惊魂游戏》"> <b></b></a> <a class="j-item" href="#" title="【足球直播】直播意甲、西甲2012收官焦点战" target="_blank"> <img src="images/c5c0440889c9315c9480e3c24a39bb892178.jpg" alt="【足球直播】直播意甲、西甲2012收官焦点战"> <b></b></a> <a class="j-item" href="#" title="微电影《青春不下线》发布，解冻你的青春！" target="_blank"> <img src="images/65823e383d7916b861527a37647cb89d5631.jpg" alt="微电影《青春不下线》发布，解冻你的青春！"> <b></b></a> </div>
+    </div>
+    <div class="next"><a href="javascript:void(0)"></a><i style="display:none"></i></div>
+  </div>
+</div>
+<script type="text/javascript" src="script/zzsc.js"></script>
+<!--container-->
+<div id="container">
+  <!--快速搜索-->
+  <div class="kssx">
+    <div class="diqu">
+      <h2>按地区</h2>
+      <a href="#">安徽</a><a href="#">广西</a><a href="#">广东</a><a href="#">上海</a><a href="#">浙江</a><a href="#">湖南</a><a href="#">湖北</a><a href="#">北京</a><a href="#">福建</a><a href="#">江西</a><a href="#">江苏</a><a href="#">山东</a><a href="#">山西</a><a href="#">云南</a> </div>
+    <div class="leixing">
+      <h2>按类型</h2>
+      <a href="#">语文</a><a href="#">数学</a><a href="#">英语</a><a href="#">地理</a><a href="#">政治</a><a href="#">音乐</a><a href="#">历中</a><a href="#">生物</a><a href="#">化学</a><a href="#">物理</a><a href="#">体育</a><a href="#">美术</a> </div>
+    <div class="hotword">
+      <h2>热搜词</h2>
+      <a href="#">名师答疑</a><a href="#">阅读理解</a><a href="#">写作提高</a><a href="#">微 积 分</a><a href="#">解析几何</a><a href="#">课前预习</a><a href="#">课后练习</a><a href="#">中国历史</a><a href="#">世界历史</a><a href="#">立体几何</a><a href="#">平面向量</a><a href="#">综合测试</a> </div>
+  </div>
+  <!--热门视频-->
+  <div class="clear"></div>
+  <div class="hotvideo">
+    <div class="title4">
+      <h1><font class="f_blue">热门</font>视频</h1>
+      <a href="#" class="more">更多&gt;</a></div>
+    <div class="orilist1">
+      <div class="topvideo1"> <img src="images/pic3.jpg" />
+        <div class="titleinfo1">
+          <h1><a href="#">杨亚雄老师的雅思实战口语课【大耳朵英语】</a></h1>
+          <div class="spxx"><a href="#">74,308次播放</a> | <a href="#">1,629次评论</a></div>
+          <div class="price"><a href="#">￥10</a></div>
+        </div>
+        <span class="sptime">1:07:20</span> <span class="play"><a href="#" target="_blank" title="播放">播放</a></span> </div>
+      <div class="splist1">
+        <div class="myvideo1">
+          <div class="myvideoimg1"><img src="images/my.jpg" />
+            <h3><a href="#">Nancy带你【玩转法兰西】...</a></h3>
+            <span class="play2"><a href="#" title="播放">播放</a></span></div>
+          <div class="title5">
+            <div class="jiage"><a href="#">￥15</a></div>
+            <div class="playtime"><a href="#">74,308次播放</a> | <a href="#">1,629次评论</a></div>
+          </div>
+        </div>
+        <div class="myvideo1">
+          <div class="myvideoimg1"><img src="images/my.jpg" />
+            <h3><a href="#">Nancy带你【玩转法兰西】...</a></h3>
+            <span class="play2"><a href="#" title="播放">播放</a></span></div>
+          <div class="title5">
+            <div class="jiage"><a href="#">￥15</a></div>
+            <div class="playtime"><a href="#">74,308次播放</a> | <a href="#">1,629次评论</a></div>
+          </div>
+        </div>
+        <div class="myvideo1">
+          <div class="myvideoimg1"><img src="images/my.jpg" />
+            <h3><a href="#">Nancy带你【玩转法兰西】...</a></h3>
+            <span class="play2"><a href="#" title="播放">播放</a></span></div>
+          <div class="title5">
+            <div class="jiage"><a href="#">￥15</a></div>
+            <div class="playtime"><a href="#">74,308次播放</a> | <a href="#">1,629次评论</a></div>
+          </div>
+        </div>
+        <div class="myvideo1">
+          <div class="myvideoimg1"><img src="images/my.jpg" />
+            <h3><a href="#">Nancy带你【玩转法兰西】...</a></h3>
+            <span class="play2"><a href="#" title="播放">播放</a></span></div>
+          <div class="title5">
+            <div class="jiage"><a href="#">￥15</a></div>
+            <div class="playtime"><a href="#">74,308次播放</a> | <a href="#">1,629次评论</a></div>
+          </div>
+        </div>
+        <div class="myvideo1">
+          <div class="myvideoimg1"><img src="images/my.jpg" />
+            <h3><a href="#">Nancy带你【玩转法兰西】...</a></h3>
+            <span class="play2"><a href="#" title="播放">播放</a></span></div>
+          <div class="title5">
+            <div class="jiage"><a href="#">￥15</a></div>
+            <div class="playtime"><a href="#">74,308次播放</a> | <a href="#">1,629次评论</a></div>
+          </div>
+        </div>
+        <div class="myvideo1">
+          <div class="myvideoimg1"><img src="images/my.jpg" />
+            <h3><a href="#">Nancy带你【玩转法兰西】...</a></h3>
+            <span class="play2"><a href="#" title="播放">播放</a></span></div>
+          <div class="title5">
+            <div class="jiage"><a href="#">￥15</a></div>
+            <div class="playtime"><a href="#">74,308次播放</a> | <a href="#">1,629次评论</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--人气班级-->
+  <div class="hotclass">
+    <div class="title7">
+      <h1><font class="f_blue">人气</font>班级</h1>
+      <a href="#" class="more">更多&gt;</a></div>
+    <ul class="picList1">
+      <li>
+        <div class="pic"><a href="#" target="_blank"><img src="images/pic4.jpg" /></a></div>
+        <div class="titlei"><span class="classtitle"><a href="#" target="_blank">MBA备考班</a></span><span class="classinfo">学生数：<a href="#">10255</a>人  开班讲师：<a href="#">Class01</a></span></div>
+      </li>
+      <li>
+        <div class="pic"><a href="#" target="_blank"><img src="images/pic4.jpg" /></a></div>
+        <div class="titlei"><span class="classtitle"><a href="#" target="_blank">MBA备考班</a></span><span class="classinfo">学生数：<a href="#">10255</a>人  开班讲师：<a href="#">Class01</a></span></div>
+      </li>
+      <li>
+        <div class="pic"><a href="#" target="_blank"><img src="images/pic4.jpg" /></a></div>
+        <div class="titlei"><span class="classtitle"><a href="#" target="_blank">MBA备考班</a></span><span class="classinfo">学生数：<a href="#">10255</a>人  开班讲师：<a href="#">Class01</a></span></div>
+      </li>
+      <li>
+        <div class="pic"><a href="#" target="_blank"><img src="images/pic4.jpg" /></a></div>
+        <div class="titlei"><span class="classtitle"><a href="#" target="_blank">MBA备考班</a></span><span class="classinfo">学生数：<a href="#">10255</a>人  开班讲师：<a href="#">Class01</a></span></div>
+      </li>
+      <li>
+        <div class="pic"><a href="#" target="_blank"><img src="images/pic4.jpg" /></a></div>
+        <div class="titlei"><span class="classtitle"><a href="#" target="_blank">MBA备考班</a></span><span class="classinfo">学生数：<a href="#">10255</a>人  开班讲师：<a href="#">Class01</a></span></div>
+      </li>
+    </ul>
+  </div>
+  <!--翻转课堂-->
+  <div class="hotclass">
+    <div class="title6">
+      <h1><font class="f_blue">翻转</font>课堂</h1>
+      <a href="#" class="more">更多&gt;</a></div>
+    <ul class="picList1">
+      <li>
+        <div class="pic"><a href="#" target="_blank"><img src="images/pic4.jpg" /></a></div>
+        <div class="titlei"><span class="classtitle"><a href="#" target="_blank">MBA备考班</a></span><span class="classinfo">学生数：<a href="#">10255</a>人  开班讲师：<a href="#">Class01</a></span></div>
+      </li>
+      <li>
+        <div class="pic"><a href="#" target="_blank"><img src="images/pic4.jpg" /></a></div>
+        <div class="titlei"><span class="classtitle"><a href="#" target="_blank">MBA备考班</a></span><span class="classinfo">学生数：<a href="#">10255</a>人  开班讲师：<a href="#">Class01</a></span></div>
+      </li>
+      <li>
+        <div class="pic"><a href="#" target="_blank"><img src="images/pic4.jpg" /></a></div>
+        <div class="titlei"><span class="classtitle"><a href="#" target="_blank">MBA备考班</a></span><span class="classinfo">学生数：<a href="#">10255</a>人  开班讲师：<a href="#">Class01</a></span></div>
+      </li>
+      <li>
+        <div class="pic"><a href="#" target="_blank"><img src="images/pic4.jpg" /></a></div>
+        <div class="titlei"><span class="classtitle"><a href="#" target="_blank">MBA备考班</a></span><span class="classinfo">学生数：<a href="#">10255</a>人  开班讲师：<a href="#">Class01</a></span></div>
+      </li>
+      <li>
+        <div class="pic"><a href="#" target="_blank"><img src="images/pic4.jpg" /></a></div>
+        <div class="titlei"><span class="classtitle"><a href="#" target="_blank">MBA备考班</a></span><span class="classinfo">学生数：<a href="#">10255</a>人  开班讲师：<a href="#">Class01</a></span></div>
+      </li>
+    </ul>
+  </div>
+  <!--问题解答及难题悬赏-->
+  <div class="wenti">
+    <div class="wenticolumn">
+      <div class="title8">
+        <h1><font class="f_blue">问题</font>解答</h1>
+        <a href="#" class="more">更多&gt;</a></div>
+      <div class="wtjdlist">
+        <div class="toppic"><img src="images/pic10.jpg" /><a href="#">用4条红绳怎么编成圆绳？？</a></div>
+        <ul>
+          <li><span><a href="#">8回答</a></span>·<a href="#">中考语文古诗词鉴赏题型及解题技巧?</a></li>
+          <li><span><a href="#">8回答</a></span>·<a href="#">中考语文古诗词鉴赏题型及解题技巧?</a></li>
+          <li><span><a href="#">8回答</a></span>·<a href="#">中考语文古诗词鉴赏题型及解题技巧?</a></li>
+          <li><span><a href="#">8回答</a></span>·<a href="#">中考语文古诗词鉴赏题型及解题技巧?</a></li>
+          <li><span><a href="#">8回答</a></span>·<a href="#">中考语文古诗词鉴赏题型及解题技巧?</a></li>
+          <li><span><a href="#">8回答</a></span>·<a href="#">中考语文古诗词鉴赏题型及解题技巧?</a></li>
+          <li><span><a href="#">8回答</a></span>·<a href="#">中考语文古诗词鉴赏题型及解题技巧?</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wenticolumn" style="float:right;">
+      <div class="txtScroll-top">
+        <div class="hd">
+          <h1><font class="f_blue">难题</font>悬赏</h1>
+          <a href="#" class="more">更多&gt;</a> </div>
+        <div class="bd">
+          <ul class="infoList">
+            <li><span class="icon"><img src="images/qiang.jpg" /></span><a href="#" target="_blank">钢铁是怎样炼成的读怎样炼成的读怎样炼成的读后了我的提感400字</a><span class="jb">25</span></li>
+            <li><span class="icon"><img src="images/ji.jpg" /></span><a href="#" target="_blank">钢铁是怎样炼成的读怎样炼成的读怎样炼成的读后了我的提感400字</a><span class="jb">25</span></li>
+            <li><span class="icon"><img src="images/arrow.jpg" /></span><a href="#" target="_blank">钢铁是怎样炼成的读怎样炼成的读怎样炼成的读后了我的提感400字</a><span class="jb">25</span></li>
+            <li><span class="icon"><img src="images/arrow.jpg" /></span><a href="#" target="_blank">钢铁是怎样炼成的读怎样炼成的读怎样炼成的读后了我的提感400字</a><span class="jb">25</span></li>
+            <li><span class="icon"><img src="images/arrow.jpg" /></span><a href="#" target="_blank">钢铁是怎样炼成的读怎样炼成的读怎样炼成的读后了我的提感400字</a><span class="jb">25</span></li>
+            <li><span class="icon"><img src="images/arrow.jpg" /></span><a href="#" target="_blank">钢铁是怎样炼成的读怎样炼成的读怎样炼成的读后了我的提感400字</a><span class="jb">25</span></li>
+            <li><span class="icon"><img src="images/arrow.jpg" /></span><a href="#" target="_blank">钢铁是怎样炼成的读怎样炼成的读怎样炼成的读后了我的提感400字</a><span class="jb">25</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="clear"></div>
+<div id="footer">
+  <div class="links">
+    <div class="linkpic">
+      <h1>合作单位</h1>
+      <div class="picshow">
+        <div id="demo" style="width:1017px; height:49px; overflow:hidden;">
+          <table border=0 align=center cellpadding=0 cellspacing=0 cellspace=0 >
+            <tr>
+              <td valign=top  id=marquePic1><table width='100%' border='0' cellspacing='0'>
+                  <tr>
+                    <td align=center><a href="#" target="_blank"><img src="images/link1.jpg" /></a></td>
+                    <td align=center><a href="#" target="_blank"><img src="images/link2.jpg" /></a></td>
+                    <td align=center><a href="#" target="_blank"><img src="images/link3.jpg" /></a></td>
+                    <td align=center><a href="#" target="_blank"><img src="images/link4.jpg" /></a></td>
+                    <td align=center><a href="#" target="_blank"><img src="images/link5.jpg" /></a></td>
+                    <td align=center><a href="#" target="_blank"><img src="images/link6.jpg" /></a></td>
+                    <td align=center><a href="#" target="_blank"><img src="images/link7.jpg" /></a></td>
+                  </tr>
+                </table></td>
+              <td id=marquePic2 valign=top></td>
+            </tr>
+          </table>
+        </div>
+        <script type="text/javascript">
+var speed=50 
+marquePic2.innerHTML=marquePic1.innerHTML 
+function Marquee(){ 
+if(demo.scrollLeft>=marquePic1.scrollWidth){ 
+demo.scrollLeft=0 
+}else{ 
+demo.scrollLeft++ 
+} 
+} 
+var MyMar=setInterval(Marquee,speed) 
+demo.onmouseover=function() {clearInterval(MyMar)} 
+demo.onmouseout=function() {MyMar=setInterval(Marquee,speed)} 
+</script>
+      </div>
+    </div>
+    <div class="clear"></div>
+    <!--合作伙伴-->
+    <div class="linktext">
+      <h1>合作伙伴</h1>
+      <div class="textlink"><a href="#" target="_blank">毒霸网址大全</a> | <a href="#" target="_blank">搜狗网址导航</a> |<a href="#" target="_blank"> 2345影视</a> | <a href="#" target="_blank">hao123</a> | <a href="#" target="_blank">搜狗搜索</a> |<a href="#" target="_blank"> 搜库</a> | <a href="#" target="_blank">必应</a> | <a href="#" target="_blank">豆瓣</a> | <a href="#" target="_blank">易迅网</a> |<a href="#" target="_blank"> 猫扑</a> | <a href="#" target="_blank">百度贴吧</a> |<a href="#" target="_blank"> 新浪微博</a> |<a href="#" target="_blank"> 果壳网</a> | <a href="#" target="_blank">人民数字</a> | <a href="#" target="_blank">114啦影视</a> | <a href="#" target="_blank">太平洋时尚网</a> | <a href="#" target="_blank">健康卫视</a> | <a href="#" target="_blank">海报网</a> | <a href="#" target="_blank">电影网</a> | <a href="#" target="_blank">178游戏网</a> | <a href="#" target="_blank">刷机精灵</a> | <a href="#" target="_blank">智能电视网</a> | <a href="#" target="_blank">奇珀市场</a> | <a href="#" target="_blank">电视家</a></div>
+    </div>
+  </div>
+  <div class="copyright">
+    <div class="Navigation"><a href="#">关于目课</a><a href="#">合作伙伴</a><a href="#">营销中心</a><a href="#">廉正举报</a><a href="#">联系客服</a><a href="#">开放平台</a><a href="#">诚征英才</a><a href="#">联系我们</a><a href="#">网站地图</a><a href="#">法律声明</a></div>
+    <div class="copy">Copyright © 2014 MYCLASS.C0M. All Rights Reserved. Designed by:<a href="http://www.wanhu.cn">Wanhu</a><br />
+      目课网 版权所有 目课网经营许可证<br />
+      <font class="f_red">当前在线人数：<b>154588</b> 人</font></div>
+  </div>
+</div>
+</body>
+</html>
