@@ -22,7 +22,7 @@ public class CourseUserNoteController {
 	public String tomynotelist(Model model,HttpServletRequest request,Integer page,Long resultCount,CourseUserNote note){
 //		if(note!=null&&note.getNoteName()!=null&&!note.getNoteName().equals("")){//当有查询条件 分页信息清空
 //			page = null;
-//			resultCount = null;
+//			resultCount = null;1111
 //		}
 		String path=request.getSession().getServletContext().getRealPath("/");
 		Page<CourseUserNote> p = new Page<CourseUserNote>(resultCount, 10,page);
