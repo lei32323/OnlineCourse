@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+	<classPathEntry location="D:\ojdbc14.jar" />
+  <context id="context1" >
+    <jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver" connectionURL="jdbc:oracle:thin:@127.0.0.1:1521:orcl" userId="onlinecourse" password="onlinecourse" />
+    <javaModelGenerator targetPackage="com.oc.entity" targetProject="OnlineCourse" >
+    	 <property name="trimStrings" value="true"/>
+    </javaModelGenerator>
+    <sqlMapGenerator targetPackage="com.oc.mapping" targetProject="OnlineCourse" />
+    <javaClientGenerator targetPackage="com.oc.dao" targetProject="OnlineCourse" type="XMLMAPPER" />
+<!--     <table schema="onlinecourse" tableName="user_info" > -->
+<!--       <columnOverride column="id" property="id" /> -->
+<!--       <columnOverride column="login_name" property="loginName" /> -->
+<!--       <columnOverride column="login_pwd" property="loginpwd" /> -->
+<!--       <columnOverride column="type" property="type" /> -->
+<!--       <columnOverride column="email" property="email" /> -->
+<!--       <columnOverride column="head_address" property="headAddress" /> -->
+<!--       <columnOverride column="status" property="status" /> -->
+<!--       <columnOverride column="self_introduction" property="selfIntroduction" /> -->
+<!--       <columnOverride column="islogin" property="islogin" /> -->
+<!--       <columnOverride column="phone" property="phone" /> -->
+<!--       <columnOverride column="qq" property="qq" /> -->
+<!--       <columnOverride column="hobby" property="hobby" /> -->
+<!--       <columnOverride column="school_id" property="schoolId" /> -->
+<!--       <columnOverride column="sex" property="sex" /> -->
+<!--     </table> -->
+    
+<!--      <table schema="onlinecourse" tableName="course" enableCountByExample="false" > -->
+<!--       <columnOverride column="id" property="id" /> -->
+<!--       <columnOverride column="name" property="name" /> -->
+<!--       <columnOverride column="class_id" property="classId" /> -->
+<!--       <columnOverride column="isdelete" property="isdelete" /> -->
+<!--       <columnOverride column="course_cover" property="courseCover" /> -->
+<!--       <columnOverride column="course_summary" property="courseSummary" /> -->
+<!--       <columnOverride column="certificate_requirement" property="certificateRequirement" /> -->
+<!--       <columnOverride column="knowledge" property="knowledge" /> -->
+<!--       <columnOverride column="outline" property="outline" /> -->
+<!--       <columnOverride column="remarks" property="remarks" /> -->
+<!--       <columnOverride column="school_id" property="schoolId" /> -->
+      
+<!--       </table> -->
+      
+<!--       <table schema="onlinecourse" tableName="course_class"> -->
+<!-- 	      <columnOverride column="id" property="id" /> -->
+<!-- 	      <columnOverride column="course_name" property="courseName" /> -->
+<!-- 	      <columnOverride column="upperlevel_id" property="upperlevelId" /> -->
+<!-- 	      <columnOverride column="isdelete" property="isdelete" /> -->
+<!-- 	      <columnOverride column="school_id" property="schoolId" /> -->
+      
+<!--       </table> -->
+      
+      
+<!--       <table schema="onlinecourse" tableName="course_teacher"> -->
+<!--      	 <columnOverride column="course_id" property="courseId" /> -->
+<!--      	 <columnOverride column="teacher_id" property="teacherId" /> -->
+<!--      	 <columnOverride column="school_id" property="schoolId" /> -->
+      
+<!--       </table> -->
+      
+      <table schema="onlinecourse" tableName="course_user_note" >
+      <columnOverride column="id" property="id"  javaType="java.lang.Integer"/>
+      <columnOverride column="vedio_id" property="id"  javaType="java.lang.Integer"/>
+      <columnOverride column="user_id" property="userId"  javaType="java.lang.Integer"/>
+      <columnOverride column="file_path" property="filePath"  javaType="java.lang.String"/>
+      <columnOverride column="school_id" property="schoolId"  javaType="java.lang.Integer"/>
+      <columnOverride column="update_date" property="updateDate"  javaType="java.util.Date"/>
+      <columnOverride column="course_name" property="courseName"  javaType="java.lang.String"/>
+      <columnOverride column="vedio_name" property="vedioName" javaType="java.lang.String" /> 
+      </table>
+      
+<!--       <table schema="onlinecourse" tableName="course_video" > -->
+<!--       <columnOverride column="id" property="id" javaType="java.lang.Integer"/> -->
+<!--       <columnOverride column="course_id" property="courseId" javaType="java.lang.Integer"/> -->
+<!--       <columnOverride column="videopath" property="videopath" javaType="java.lang.String"/> -->
+<!--       <columnOverride column="creatime" property="creatime" javaType="java.util.Date"/> -->
+<!--       <columnOverride column="videolong" property="videolong" javaType="java.lang.Integer"/> -->
+<!--       <columnOverride column="total" property="total" javaType="java.lang.Integer"/> -->
+<!--       <columnOverride column="comment_count" property="commentCount" javaType="java.lang.Integer"/> -->
+<!--       <columnOverride column="school_id" property="schoolId" javaType="java.lang.Integer"/> -->
+      
+<!--       </table> -->
+      
+<!--       <table schema="onlinecourse" tableName="degree" > -->
+<!--       <columnOverride column="id" property="id" javaType="java.lang.Integer"/> -->
+<!--       <columnOverride column="name" property="name" javaType="java.lang.String"/> -->
+<!--       <columnOverride column="isdelete" property="isdelete" javaType="java.lang.Integer"/> -->
+      
+<!--       </table> -->
+      
+<!--       <table schema="onlinecourse" tableName="questions_answer" > -->
+<!--    		<columnOverride column="id" property="id" javaType="java.lang.Integer"/> -->
+<!--    		<columnOverride column="question_id" property="questionId" javaType="java.lang.Integer"/> -->
+<!--    		<columnOverride column="answer_id" property="answerId" javaType="java.lang.Integer"/> -->
+<!--    		<columnOverride column="thumbsup_count" property="thumbsupCount" javaType="java.lang.Integer"/> -->
+<!--    		<columnOverride column="despise_count" property="despiseCount" javaType="java.lang.Integer"/> -->
+<!--    		<columnOverride column="answer_date" property="answerDate" javaType="java.util.Date"/> -->
+<!--    		<columnOverride column="isput" property="isput" javaType="java.lang.Integer"/> -->
+<!--    		<columnOverride column="school_id" property="schoolId" javaType="java.lang.Integer"/> -->
+<!--    		<columnOverride column="answer_name" property="answerName" javaType="java.lang.String"/> -->
+      
+<!--       </table> -->
+      
+<!--       <table schema="onlinecourse" tableName="questions_class" > -->
+<!--        <columnOverride column="id" property="id" javaType="java.lang.Integer"/> -->
+<!--        <columnOverride column="name" property="name" javaType="java.lang.String"/> -->
+<!--        <columnOverride column="isdelete" property="isdelete" javaType="java.lang.Integer"/> -->
+<!--        <columnOverride column="school_id" property="schoolId" javaType="java.lang.Integer"/> -->
+      
+<!--       </table> -->
+      
+<!--       <table schema="onlinecourse" tableName="tab_questions"> -->
+<!--      <columnOverride column="id" property="id" javaType="java.lang.Integer"/> -->
+<!--      <columnOverride column="questions_class_id" property="questionsClassId" javaType="java.lang.Integer"/> -->
+<!--      <columnOverride column="file_path" property="filePath" javaType="java.lang.String"/> -->
+<!--      <columnOverride column="doubt" property="doubt" javaType="java.lang.String"/> -->
+<!--      <columnOverride column="content" property="content" javaType="java.lang.String"/> -->
+<!--      <columnOverride column="status" property="status" javaType="java.lang.Integer"/> -->
+<!--      <columnOverride column="school_id" property="schoolId" javaType="java.lang.Integer"/> -->
+      
+<!--       </table> -->
+      
+<!--       <table schema="onlinecourse" tableName="teacher"> -->
+<!--        <columnOverride column="id" property="id" javaType="java.lang.Integer"/> -->
+<!--        <columnOverride column="name" property="name" javaType="java.lang.String"/> -->
+<!--        <columnOverride column="school_id" property="schoolId" javaType="java.lang.Integer"/> -->
+      
+<!--       </table> -->
+      
+<!--       <table schema="onlinecourse" tableName="teacher_degree"> -->
+<!--        <columnOverride column="teacher_id" property="teacherId" javaType="java.lang.Integer"/> -->
+<!--        <columnOverride column="degree_id" property="degreeId" javaType="java.lang.Integer"/> -->
+<!--        <columnOverride column="school_id" property="schoolId" javaType="java.lang.Integer"/> -->
+      
+<!--       </table> -->
+      
+<!--       <table schema="onlinecourse" tableName="test_paper"> -->
+<!--       <columnOverride column="id" property="id" javaType="java.lang.Integer"/> -->
+<!--       <columnOverride column="name" property="name" javaType="java.lang.String"/> -->
+<!--       <columnOverride column="course_id" property="courseId" javaType="java.lang.Integer"/> -->
+<!--       <columnOverride column="subject" property="subject" javaType="java.lang.String"/> -->
+<!--       <columnOverride column="options" property="options" javaType="java.lang.String"/> -->
+<!--       <columnOverride column="answer" property="answer" javaType="java.lang.String"/> -->
+<!--       <columnOverride column="isdelete" property="isdelete" javaType="java.lang.Integer"/> -->
+<!--       <columnOverride column="school_id" property="schoolId" javaType="java.lang.Integer"/> -->
+      
+<!--       </table> -->
+      
+<!--       <table schema="onlinecourse" tableName="user_course"> -->
+<!--        <columnOverride column="user_id" property="userId" javaType="java.lang.Integer"/> -->
+<!--        <columnOverride column="course_id" property="courseId" javaType="java.lang.Integer"/> -->
+<!--        <columnOverride column="status" property="status" javaType="java.lang.Integer"/> -->
+<!--        <columnOverride column="isdelete" property="isdelete" javaType="java.lang.Integer"/> -->
+<!--        <columnOverride column="school_id" property="schoolId" javaType="java.lang.Integer"/> -->
+      
+<!--       </table> -->
+      
+<!--       <table schema="onlinecourse" tableName="user_historytest_paper"> -->
+<!--       <columnOverride column="user_id" property="userId" javaType="java.lang.Integer"/> -->
+<!--       <columnOverride column="test_paper" property="testPaper" javaType="java.lang.Integer"/> -->
+<!--       <columnOverride column="score" property="score" javaType="java.lang.Integer"/> -->
+<!--       <columnOverride column="total" property="total" javaType="java.lang.Integer"/> -->
+<!--       <columnOverride column="error_count" property="errorCount" javaType="java.lang.Integer"/> -->
+<!--       <columnOverride column="errors" property="errors" javaType="java.lang.String"/> -->
+<!--       <columnOverride column="isdelete" property="isdelete" javaType="java.lang.Integer"/> -->
+<!--       <columnOverride column="school_id" property="schoolId" javaType="java.lang.Integer"/> -->
+      
+<!--       </table> -->
+      
+<!--       <table schema="onlinecourse" tableName="user_vedio" > -->
+<!--       <columnOverride column="user_id" property="userId" javaType="java.lang.Integer"/> -->
+<!--       <columnOverride column="vedio_id" property="vedioId" javaType="java.lang.Integer"/> -->
+<!--       <columnOverride column="status" property="status" javaType="java.lang.Integer"/> -->
+<!--       <columnOverride column="school_id" property="schoolId" javaType="java.lang.Integer"/> -->
+<!--       <columnOverride column="update_date" property="updateDate" javaType="java.util.Date"/> -->
+      
+<!--       </table> -->
+      
+<!--       <table schema="onlinecourse" tableName="tab_school" > -->
+<!--        <columnOverride column="id" property="id" javaType="java.lang.Integer"/> -->
+<!--        <columnOverride column="school_name" property="schoolName" javaType="java.lang.String"/> -->
+<!--        <columnOverride column="image_size" property="imageSize" javaType="java.lang.String"/> -->
+<!--        <columnOverride column="school_profile" property="schoolProfile" javaType="java.lang.String"/> -->
+<!--        <columnOverride column="isdelete" property="isdelete" javaType="java.lang.Integer"/> -->
+<!--        <columnOverride column="password" property="password" javaType="java.lang.String"/> -->
+      
+<!--       </table> -->
+      
+<!--       <table schema="onlinecourse" tableName="voi_comment"> -->
+<!--        <columnOverride column="id" property="id" javaType="java.lang.Integer"/> -->
+<!--        <columnOverride column="course_id" property="courseId" javaType="java.lang.Integer"/> -->
+<!--        <columnOverride column="user_id" property="userId" javaType="java.lang.Integer"/> -->
+<!--        <columnOverride column="content" property="content" javaType="java.lang.String"/> -->
+<!--        <columnOverride column="forward" property="forward" javaType="java.lang.Integer"/> -->
+<!--        <columnOverride column="reply" property="reply" javaType="java.lang.Integer"/> -->
+<!--        <columnOverride column="update_date" property="updateDate" javaType="java.util.Date"/> -->
+<!--        <columnOverride column="school_id" property="schoolId" javaType="java.lang.Integer"/> -->
+      
+<!--       </table> -->
+      
+<!--       <table schema="onlinecourse" tableName="user_words" > -->
+<!--        <columnOverride column="id" property="id" javaType="java.lang.Integer"/> -->
+<!--        <columnOverride column="message_side_id" property="messageSideId" javaType="java.lang.Integer"/> -->
+<!--        <columnOverride column="update_date" property="updateDate" javaType="java.util.Date"/> -->
+<!--        <columnOverride column="school_id" property="schoolId" javaType="java.lang.Integer"/> -->
+<!--        <columnOverride column="user_id" property="userId" javaType="java.lang.Integer"/> -->
+      
+<!--       </table> -->
+      
+<!--       <table schema="onlinecourse" tableName="user_mood"> -->
+<!--        <columnOverride column="id" property="id" javaType="java.lang.Integer"/> -->
+<!--        <columnOverride column="user_id" property="userId" javaType="java.lang.Integer"/> -->
+<!--        <columnOverride column="content" property="content" javaType="java.lang.String"/> -->
+<!--        <columnOverride column="update_date" property="updateDate" javaType="java.util.Date"/> -->
+<!--        <columnOverride column="school_id" property="schoolId" javaType="java.lang.Integer"/> -->
+      
+<!--       </table> -->
+      
+  </context>
+</generatorConfiguration>
