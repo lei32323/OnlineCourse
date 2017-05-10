@@ -19,6 +19,7 @@ public class loginInterceptor implements  HandlerInterceptor   {
 		if(parameter!=null&&parameter.equals("1")){//如果是则放过让用户登录
 			return true;
 		}
+		System.out.println(request.getRequestURL());
 		if(user==null){//不是的就跳转到登陆页面
 //			request.getRequestDispatcher("/WEB-INF/view/index.jsp").forward(request, response);  
 			response.sendRedirect(request.getContextPath()+"/login?isok=1");
