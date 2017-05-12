@@ -58,8 +58,6 @@ EvPNG.fix('img,.content,.svc-payment,.svc-gathering,.svc-weg,.svc-tx,.svc-credit
       <div class="topnavmenu">
         <div class="nav">
           <ul>
-            <li><a href="<%=contextPath %>/login" >首页</a></li>
-            <li><a href="中学时代.html">翻转课堂</a></li>
              <li><a href="<%=contextPath %>/school">大学时代</a></li>
             <li><a href="<%=contextPath %>/userinfo" >个人中心</a></li>
           </ul>

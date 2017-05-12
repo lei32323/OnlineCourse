@@ -79,9 +79,6 @@ $(this).find('.subbox').css("display","none");
     <ul class="menu1">
       <li class="on"><a href="<%=contextPath %>/toschoolinfo"><em>高校信息</em></a></li>
     </ul>
-    <ul class="menu2">
-            <li><a href="#"><em>试题管理</em></a></li>
-    </ul>
   </div>  
   <div class="right740">
  <div class="title10"><h1><a href="<%=contextPath %>/toschoolinfo">信息编辑</a></h1><h1><a href="<%=contextPath %>/toupdpwd" class="on">密码修改</a></h1></div>

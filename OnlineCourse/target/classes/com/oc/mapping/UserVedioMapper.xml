@@ -8,10 +8,10 @@
       This element was generated on Thu Apr 27 22:13:35 CST 2017.
     -->
     <id column="USER_ID" jdbcType="DECIMAL" property="userId" />
-    <result column="VEDIO_ID" jdbcType="DECIMAL" property="vedioId" />
     <result column="STATUS" jdbcType="DECIMAL" property="status" />
     <result column="SCHOOL_ID" jdbcType="DECIMAL" property="schoolId" />
     <result column="UPDATE_DATE" jdbcType="DATE" property="updateDate" />
+    <association property="courseVideo" column="VEDIO_ID" javaType="com.oc.entity.CourseVideo" select="com.oc.dao.CourseVideoMapper.selectByPrimaryKey"></association>
   </resultMap>
   <sql id="Example_Where_Clause">
     <!--

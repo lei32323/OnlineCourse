@@ -11,25 +11,10 @@
                             http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
 
     <!--避免IE执行AJAX时，返回JSON出现下载文件 -->
-<!--     <bean id="mappingJacksonHttpMessageConverter" -->
-<!--         class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter"> -->
-<!--         <property name="supportedMediaTypes"> -->
-<!--             <list> --> 
-<!--                 <value>text/html;charset=UTF-8</value> -->
-<!--             </list> -->
-<!--         </property> -->
-<!--     </bean> -->
+ 
     <context:component-scan base-package="com.oc"></context:component-scan>
 
-    <!-- 启动SpringMVC的注解功能，完成请求和注解POJO的映射 -->
-<!--     <bean -->
-<!--         class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter"> -->
-<!--         <property name="messageConverters"> -->
-<!--             <list> -->
-<!--                 <ref bean="mappingJacksonHttpMessageConverter" />    JSON转换器 -->
-<!--             </list> -->
-<!--         </property> -->
-<!--     </bean> -->
+
 
     <!-- 对静态资源的访问 -->
     <mvc:resources mapping="/js/**" location="/js/" /> 
@@ -69,6 +54,8 @@
     		<mvc:mapping path="/**" />
     		<mvc:exclude-mapping path="/login"/>
     		<mvc:exclude-mapping path="/regin"/>
+    		<mvc:exclude-mapping path="/school"/>
+    		<mvc:exclude-mapping path="/userinfo"/>
     		<mvc:exclude-mapping path="/static/**"/>
     		<bean class="com.oc.util.loginInterceptor"/>
     	</mvc:interceptor>

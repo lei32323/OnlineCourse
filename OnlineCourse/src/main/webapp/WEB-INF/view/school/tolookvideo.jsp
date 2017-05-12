@@ -54,10 +54,9 @@ EvPNG.fix('img,.content,.svc-payment,.svc-gathering,.svc-weg,.svc-tx,.svc-credit
       <div class="topnavmenu">
         <div class="nav">
           <ul>
-              <li style="line-height:80px"><a href="<%=contextPath %>/login" >首页</a></li>
-            <li style="line-height:80px"><a href="中学时代.html">翻转课堂</a></li>
+              <li style="line-height:80px"><a href="<%=contextPath %>/login"  class="on">首页</a></li>
             <li style="line-height:80px"><a href="<%=contextPath %>/school">大学时代</a></li>
-            <li style="line-height:80px"><a href="<%=contextPath %>/userinfo" class="on">个人中心</a></li>
+            <li style="line-height:80px"><a href="<%=contextPath %>/userinfo">个人中心</a></li>
           </ul>
         </div>
         <div class="question">
@@ -82,14 +81,10 @@ EvPNG.fix('img,.content,.svc-payment,.svc-gathering,.svc-weg,.svc-tx,.svc-credit
   <div class="mod_player_section cf" id="mod_inner">
   
     <div class="mod_player" id="mod_player">
-    
-    <video src="<%=contextPath %>/${video.videopath}" width="856px"  height="519px" controls="controls">
+   		 <video src="<%=contextPath %>/${video.videopath}" width="856px"  height="519px" controls="controls">
 		您的浏览器不支持 video 标签。
-<!-- 		<source src="movie.ogg" type="video/ogg" /> -->
-<%--   		<source src="<%=contextPath %>/${video.videopath}" type="video/mp4" /> --%>
-	</video>
-
-</div>
+		</video>
+	</div>
 
 
     <div class="mod_video_album_section mod_video_album_section_v3" id="fullplaylist">
@@ -102,7 +97,7 @@ EvPNG.fix('img,.content,.svc-payment,.svc-gathering,.svc-weg,.svc-tx,.svc-credit
            <c:forEach items="${videos.list }" var="v">
            	 <li class="item"> <a class="item_link" href="<%=contextPath %>/tolookvideo?courseId=${v.courseId}&id=${v.id}" title="${v.name }" >
              <span class="album_pic"> <img width="117px" height="65px" src="<%=contextPath %>/${v.fengmian}" alt="${v.name }">
-              <span class="figure_mask">  </span> </span>
+              </span>
               <div class="video_title"><strong>${v.name }</strong><br />
                 播放：${v.total }次<br />
                 评论：${v.commentCount }次</div>
@@ -115,216 +110,61 @@ EvPNG.fix('img,.content,.svc-payment,.svc-gathering,.svc-weg,.svc-tx,.svc-credit
     </div>
   </div>
   <!--点赞-->
-  <div class="agree"> <span class="dzsc"><a href="#" class="dianz">80</a><a href="#" class="kdsc">收藏</a></span> <span class="fenx">
+  <div class="agree">  <span class="fenx">
     <div class="bshare-custom icon-medium">
-      <div class="bsPromo bsPromo2"></div>
+      
       <a title="分享到QQ空间" class="bshare-qzone"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到人人网" class="bshare-renren"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="分享到网易微博" class="bshare-neteasemb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div>
     <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=2&amp;lang=zh"></script>
     <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
-    </span> <span class="cishu"><img src="images/gkcs.jpg" />&nbsp;&nbsp;4.245播放</span> <span style="float:right; margin-top:30px;">
-    <input type="image" src="images/zxpc.jpg" style="float:left; margin-right:10px;" />
-    <input type="image" src="images/xxbj.jpg" style="float:left;" />
-    </span> </div>
+    </span> <span class="cishu"><img src="<%=contextStatic %>/images/gkcs.jpg" />&nbsp;&nbsp;${video.commentCount }播放</span> <span style="float:right; margin-top:30px;">
+    <input type="image" src="<%=contextStatic %>/images/xxbj.jpg" style="float:left; margin-right:230px;" />
+<%--     <input type="image" src="<%=contextStatic %>/images/xxbj.jpg" style="float:left;" /> --%>
+    </span>
+   </div>
   <!--视频简介-->
   <div class="playerjj">
-    <ul>
-      <li>
-        <div class="upname">
-          <div class="upnameimg"><img src="<%=contextStatic %>/images/upname.jpg" width="61" height="60"/></div>
-          <div class="upnamet">昵称:<a href="#">拍客现场</a><br />
-            <img src="images/xbg.jpg" /></div>
-        </div>
-        <div class="upinfo">
-          <h1>视频简介:</h1>
-          <p>8月16日，一场名为“帆帆加油，生命接力”的演出在糖果星光现场举行，义演的票务收入将通过公证转交给主办方中华少年儿童慈善救助基金会，用于十二岁淋巴瘤患者岳帆的救助。8月16日，一场名为“帆帆加油，生命接力”的演出在糖果星光现场举行，义演的票务收入将通过公证转交给主办方中华少年儿童慈善救助基金会，用于十二岁淋巴瘤患者岳帆的救助。</p>
-          <span>9小时前 上传</span> </div>
-      </li>
-    </ul>
+   
   </div>
 </div>
 <div class="clear"></div>
 <!--留言-->
 <div class="lybox">
   <div class="guestbook">
-    <div class="left868">
+    <div class="left868" style="margin-left:120px">
       <!--留言板-->
       <div class="fbpl">
-        <div class="plr"><span class="pltx"><a href="#"><img src="images/upname.jpg" width="61" height="61" /></a></span><span class="plname"><a href="#">Star_moon66250919</a></span><span class="plnum">所有评论<a href="#"> 21</a></span></div>
-        <div class="zishu">0/300</div>
-        <textarea name="textarea" class="input4"></textarea>
-        <input type="image" src="<%=contextStatic %>/images/fbpl.jpg" style="margin-left:25px;" />
+        <div class="plr"><span class="pltx"><a href="#"><img src="<%=contextPath %>/${tea.userinfo.headAddress}" width="61" height="61" /></a></span><span class="plname"><a href="#">${tea.name }</a></span>
+<!--         <span class="plnum">所有评论<a href="#"> 21</a></span> -->
+        </div>
+<!--         <div class="zishu">0/300</div> -->
+        <textarea name="textarea" id="textarea" class="input4"></textarea>
+        <input type="image" src="<%=contextStatic %>/images/fbpl.jpg" id="btn" style="margin-left:25px;" />
       </div>
       <!--留言列表-->
       <div class="lylist">
         <div class="title1">
-          <h1>全部评论（21）</h1>
+          <h1>全部评论</h1>
           <div class="plpage">
-            <div class="page1"><span class="num"><font class="f_blue">1</font>/41</span><span class="prev">上一页</span><span class="next"><a href="#">下一页</a></span> </div>
+<!--             <div class="page1"><span class="num"><font class="f_blue">1</font>/41</span><span class="prev">上一页</span><span class="next"><a href="#">下一页</a></span> </div> -->
           </div>
         </div>
         <ul class="pllist">
-          <li>
-            <div class="lyimg"><a href="#"><img src="<%=contextStatic %>/images/grzx/lyimg.jpg" /></a></div>
-            <div class="lyinfo">
-              <div class="lyname"><span class="myname"><a href="#">huo_zhenying</a></span></div>
-              <div class="gxqm">为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多</div>
-              <div class="reque">36分钟前 来自iPad客户端 <span class="zhuanfa"><a href="#">转发</a><a href="#">回复</a></span></div>
-            </div>
-          </li>
-          <li>
-            <div class="lyimg"><a href="#"><img src="<%=contextStatic %>/images/grzx/lyimg.jpg" /></a></div>
-            <div class="lyinfo">
-              <div class="lyname"><span class="myname"><a href="#">huo_zhenying</a></span></div>
-              <div class="gxqm">为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多</div>
-              <div class="reque">36分钟前 来自iPad客户端 <span class="zhuanfa"><a href="#">转发</a><a href="#">回复</a></span></div>
-            </div>
-          </li>
-          <li>
-            <div class="lyimg"><a href="#"><img src="<%=contextStatic %>/images/grzx/lyimg.jpg" /></a></div>
-            <div class="lyinfo">
-              <div class="lyname"><span class="myname"><a href="#">huo_zhenying</a></span></div>
-              <div class="gxqm">为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多</div>
-              <div class="reque">36分钟前 来自iPad客户端 <span class="zhuanfa"><a href="#">转发</a><a href="#">回复</a></span></div>
-            </div>
-          </li>
-          <li>
-            <div class="lyimg"><a href="#"><img src="<%=contextStatic %>/images/grzx/lyimg.jpg" /></a></div>
-            <div class="lyinfo">
-              <div class="lyname"><span class="myname"><a href="#">huo_zhenying</a></span></div>
-              <div class="gxqm">为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多</div>
-              <div class="reque">36分钟前 来自iPad客户端 <span class="zhuanfa"><a href="#">转发</a><a href="#">回复</a></span></div>
-            </div>
-          </li>
-          <li>
-            <div class="lyimg"><a href="#"><img src="<%=contextStatic %>/images/grzx/lyimg.jpg" /></a></div>
-            <div class="lyinfo">
-              <div class="lyname"><span class="myname"><a href="#">huo_zhenying</a></span></div>
-              <div class="gxqm">为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多</div>
-              <div class="reque">36分钟前 来自iPad客户端 <span class="zhuanfa"><a href="#">转发</a><a href="#">回复</a></span></div>
-            </div>
-          </li>
-          <li>
-            <div class="lyimg"><a href="#"><img src="<%=contextStatic %>/images/grzx/lyimg.jpg" /></a></div>
-            <div class="lyinfo">
-              <div class="lyname"><span class="myname"><a href="#">huo_zhenying</a></span></div>
-              <div class="gxqm">为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多为什么不叫汪峰来更火 募捐的人更多</div>
-              <div class="reque">36分钟前 来自iPad客户端 <span class="zhuanfa"><a href="#">转发</a><a href="#">回复</a></span></div>
-            </div>
-          </li>
+        
+       
+        
         </ul>
-        <div class="page"><span class="prev">上一页</span><span class="num"><a href="#" class="on">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#">5</a><a href="#">6</a><a href="#">7</a><a href="#">8</a><a href="#">9</a><a href="#">10</a></span><span class="next"><a href="#">下一页</a></span><em>217/5</em>转到
-          <input name="textfield" type="text" value="5" class="inputpage"/>
-          页
-          <input type="submit" name="Submit" value="GO" class="btngo"/>
+        <div class="page"><span class="next"><a href="javascript:void(0)" onclick="nextprev()">上一页</a></span><span class="num"></span><span class="next"><a href="javascript:void(0)" onclick="nextlast()">下一页</a></span>
         </div>
       </div>
     </div>
     <!--推荐视频-->
-    <div class="right306">
-      <div class="title2">
-        <h1>推荐视频</h1>
-      </div>
-      <div class="tjlist">
-        <ul>
-          <li>
-            <div class="tjimg"><img src="<%=contextStatic %>/images/my.jpg" width="138" height="83" /><span class="bftime">02:10</span></div>
-            <div class="tjinfo">
-              <h2><a href="#">快闪撑同志！LES美女映像节现场结婚！！</a></h2>
-              <span>12万次播放</span></div>
-          </li>
-          <li>
-            <div class="tjimg"><img src="<%=contextStatic %>/images/my.jpg" width="138" height="83" /><span class="bftime">02:10</span></div>
-            <div class="tjinfo">
-              <h2><a href="#">快闪撑同志！LES美女映像节现场结婚！！</a></h2>
-              <span>12万次播放</span></div>
-          </li>
-          <li>
-            <div class="tjimg"><img src="<%=contextStatic %>/images/my.jpg" width="138" height="83" /><span class="bftime">02:10</span></div>
-            <div class="tjinfo">
-              <h2><a href="#">快闪撑同志！LES美女映像节现场结婚！！</a></h2>
-              <span>12万次播放</span></div>
-          </li>
-          <li>
-            <div class="tjimg"><img src="<%=contextStatic %>/images/my.jpg" width="138" height="83" /><span class="bftime">02:10</span></div>
-            <div class="tjinfo">
-              <h2><a href="#">快闪撑同志！LES美女映像节现场结婚！！</a></h2>
-              <span>12万次播放</span></div>
-          </li>
-          <li>
-            <div class="tjimg"><img src="<%=contextStatic %>/images/my.jpg" width="138" height="83" /><span class="bftime">02:10</span></div>
-            <div class="tjinfo">
-              <h2><a href="#">快闪撑同志！LES美女映像节现场结婚！！</a></h2>
-              <span>12万次播放</span></div>
-          </li>
-          <li>
-            <div class="tjimg"><img src="<%=contextStatic %>/images/my.jpg" width="138" height="83" /><span class="bftime">02:10</span></div>
-            <div class="tjinfo">
-              <h2><a href="#">快闪撑同志！LES美女映像节现场结婚！！</a></h2>
-              <span>12万次播放</span></div>
-          </li>
-          <li>
-            <div class="tjimg"><img src="<%=contextStatic %>/images/my.jpg" width="138" height="83" /><span class="bftime">02:10</span></div>
-            <div class="tjinfo">
-              <h2><a href="#">快闪撑同志！LES美女映像节现场结婚！！</a></h2>
-              <span>12万次播放</span></div>
-          </li>
-          <li>
-            <div class="tjimg"><img src="<%=contextStatic %>/images/my.jpg" width="138" height="83" /><span class="bftime">02:10</span></div>
-            <div class="tjinfo">
-              <h2><a href="#">快闪撑同志！LES美女映像节现场结婚！！</a></h2>
-              <span>12万次播放</span></div>
-          </li>
-          <li>
-            <div class="tjimg"><img src="<%=contextStatic %>/images/my.jpg" width="138" height="83" /><span class="bftime">02:10</span></div>
-            <div class="tjinfo">
-              <h2><a href="#">快闪撑同志！LES美女映像节现场结婚！！</a></h2>
-              <span>12万次播放</span></div>
-          </li>
-        </ul>
-      </div>
-    </div>
+    
   </div>
 </div>
 <div class="clear"></div>
 <div id="footer">
   <div class="links">
-    <div class="linkpic">
-      <h1>合作单位</h1>
-      <div class="picshow">
-        <div id="demo" style="width:1017px; height:49px; overflow:hidden;">
-          <table border=0 align=center cellpadding=0 cellspacing=0 cellspace=0 >
-            <tr>
-              <td valign=top  id=marquePic1><table width='100%' border='0' cellspacing='0'>
-                  <tr>
-                    <td align=center><a href="#" target="_blank"><img src="<%=contextStatic %>/images/link1.jpg" /></a></td>
-                    <td align=center><a href="#" target="_blank"><img src="<%=contextStatic %>/images/link2.jpg" /></a></td>
-                    <td align=center><a href="#" target="_blank"><img src="<%=contextStatic %>/images/link3.jpg" /></a></td>
-                    <td align=center><a href="#" target="_blank"><img src="<%=contextStatic %>/images/link4.jpg" /></a></td>
-                    <td align=center><a href="#" target="_blank"><img src="<%=contextStatic %>/images/link5.jpg" /></a></td>
-                    <td align=center><a href="#" target="_blank"><img src="<%=contextStatic %>/images/link6.jpg" /></a></td>
-                    <td align=center><a href="#" target="_blank"><img src="<%=contextStatic %>/images/link7.jpg" /></a></td>
-                  </tr>
-                </table></td>
-              <td id=marquePic2 valign=top></td>
-            </tr>
-          </table>
-        </div>
-        <script type="text/javascript">
-var speed=50 
-marquePic2.innerHTML=marquePic1.innerHTML 
-function Marquee(){ 
-if(demo.scrollLeft>=marquePic1.scrollWidth){ 
-demo.scrollLeft=0 
-}else{ 
-demo.scrollLeft++ 
-} 
-} 
-var MyMar=setInterval(Marquee,speed) 
-demo.onmouseover=function() {clearInterval(MyMar)} 
-demo.onmouseout=function() {MyMar=setInterval(Marquee,speed)} 
-</script>
-      </div>
-    </div>
+    
     <div class="clear"></div>
     <!--合作伙伴-->
     <div class="linktext">
@@ -333,11 +173,11 @@ demo.onmouseout=function() {MyMar=setInterval(Marquee,speed)}
     </div>
   </div>
   <div class="copyright">
-    <div class="Navigation"><a href="#">关于目课</a><a href="#">合作伙伴</a><a href="#">营销中心</a><a href="#">廉正举报</a><a href="#">联系客服</a><a href="#">开放平台</a><a href="#">诚征英才</a><a href="#">联系我们</a><a href="#">网站地图</a><a href="#">法律声明</a></div>
-    <div class="copy">Copyright © 2014 MYCLASS.C0M. All Rights Reserved. Designed by:<a href="http://www.wanhu.cn">Wanhu</a><br />
+    <div class="Navigation"><a href="#">关于我们</a><a href="#">合作伙伴</a><a href="#">营销中心</a><a href="#">廉正举报</a><a href="#">联系客服</a><a href="#">开放平台</a><a href="#">诚征英才</a><a href="#">联系我们</a><a href="#">网站地图</a><a href="#">法律声明</a></div>
+    <div class="copy">Copyright © 2014 MYCLASS.C0M. All Rights Reserved. Designed by:<a href="#">Wanhu</a><br />
       目课网 版权所有 目课网经营许可证<br />
-      <font class="f_red">当前在线人数：<b>154588</b> 人</font></div>
   </div>
+</div>
 </div>
 
 <script>
@@ -345,14 +185,136 @@ demo.onmouseout=function() {MyMar=setInterval(Marquee,speed)}
 	if($("#content").val()==""){
 		$("#content").val("搜索日志");
 	}
-	function next(index){
-		$("#moodform").attr("action","<%=contextPath %>/tomoodlist");
-		if($("#content").val()=="搜索日志"){
-			$("#content").val("");
-		}
-		$("#page").val(index);
-	//		alert($("#page").val())
-		$("#moodform").submit();
+	function nextprev(){
+		var videoid = ${video.id};
+		var index = parseInt($("#page").val())-1;
+		var resultCount = $("#resultCount").val();
+		$("#page").val(index-1);
+		$(".pllist").html("");
+		$(".num").html("");
+		$.ajax({
+			url:"<%=contextPath %>/getvoidcommit?forward="+videoid+"&page="+index+"&resultCount="+resultCount,
+			dataType:"json",
+			async:false,
+			success:function(data){
+// 				alert(data.comms.list);
+				var result = data.comms;
+				for(var i=0;i<result.totalPage;i++){
+					var s = "<a href='javascript:void(0)'  onclick='next("+(i+1)+","+result.page+","+result.resultCount+")'>"+(i+1)+"</a>";
+					if((i+1)==index-1){
+						 s = "<a href='javascript:void(0)' class='on' onclick='next("+(i+1)+","+result.page+","+result.resultCount+")'>"+(i+1)+"</a>";
+					}
+					$(".num").append(s);
+				}
+				for(var i=0;i<result.list.length;i++){
+					
+// 					alert(result.list[i].userinfo)
+					
+					var str = ' <li>'
+				           +' <div class="lyimg"><a href="#"><img src="<%=contextStatic %>/'+result.list[i].userinfo.headAddress+'" width="50px" height="50px" /></a></div>'
+				           +' <div class="lyinfo">'
+				            +'  <div class="lyname"><span class="myname"><a href="#">'+result.list[i].userinfo.loginName+'</a></span></div>'
+				            +'  <div class="gxqm">'+result.list[i].content+'</div>'
+				            +'  <div class="reque">'+result.list[i].updateDateStr+'</div>'
+				          + ' </div>'
+				          +'</li>';
+				          $(".pllist").append(str);
+				}
+				
+			},
+			error:function(a,b,c){
+				alert(a+"+"+b+"+"+c)
+			}
+			
+		})
+	}
+	function nextlast(){
+		var videoid = ${video.id};
+		var index = parseInt($("#page").val())+1;
+		var resultCount = $("#resultCount").val();
+		$("#page").val(index+1);
+		$(".pllist").html("");
+		$(".num").html("");
+		$.ajax({
+			url:"<%=contextPath %>/getvoidcommit?forward="+videoid+"&page="+index+"&resultCount="+resultCount,
+			dataType:"json",
+			async:false,
+			success:function(data){
+// 				alert(data.comms.list);
+				var result = data.comms;
+				for(var i=0;i<result.totalPage;i++){
+					var s = "<a href='javascript:void(0)'  onclick='next("+(i+1)+","+result.page+","+result.resultCount+")'>"+(i+1)+"</a>";
+					if((i+1)==index-1){
+						 s = "<a href='javascript:void(0)' class='on' onclick='next("+(i+1)+","+result.page+","+result.resultCount+")'>"+(i+1)+"</a>";
+					}
+					$(".num").append(s);
+				}
+				for(var i=0;i<result.list.length;i++){
+					
+// 					alert(result.list[i].userinfo)
+					
+					var str = ' <li>'
+				           +' <div class="lyimg"><a href="#"><img src="<%=contextStatic %>/'+result.list[i].userinfo.headAddress+'" width="50px" height="50px" /></a></div>'
+				           +' <div class="lyinfo">'
+				            +'  <div class="lyname"><span class="myname"><a href="#">'+result.list[i].userinfo.loginName+'</a></span></div>'
+				            +'  <div class="gxqm">'+result.list[i].content+'</div>'
+				            +'  <div class="reque">'+result.list[i].updateDateStr+'</div>'
+				          + ' </div>'
+				          +'</li>';
+				          $(".pllist").append(str);
+				}
+				
+			},
+			error:function(a,b,c){
+				alert(a+"+"+b+"+"+c)
+			}
+			
+		})
+	}
+	
+	function next(index,page,resultCount){
+// 		alert(index+"-"+index+"-"+resultCount)
+		var videoid = ${video.id};
+		$("#page").val(page);
+		$("#resultCount").val(resultCount);
+		$(".pllist").html("");
+		$(".num").html("");
+		
+		$.ajax({
+			url:"<%=contextPath %>/getvoidcommit?forward="+videoid+"&page="+index+"&resultCount="+resultCount,
+			dataType:"json",
+			async:false,
+			success:function(data){
+// 				alert(data.comms.list);
+				var result = data.comms;
+				for(var i=0;i<result.totalPage;i++){
+					var s = "<a href='javascript:void(0)'  onclick='next("+(i+1)+","+result.page+","+result.resultCount+")'>"+(i+1)+"</a>";
+					if((i+1)==index){
+						 s = "<a href='javascript:void(0)' class='on' onclick='next("+(i+1)+","+result.page+","+result.resultCount+")'>"+(i+1)+"</a>";
+					}
+					$(".num").append(s);
+				}
+				for(var i=0;i<result.list.length;i++){
+					
+// 					alert(result.list[i].userinfo)
+					
+					var str = ' <li>'
+				           +' <div class="lyimg"><a href="#"><img src="<%=contextStatic %>/'+result.list[i].userinfo.headAddress+'" width="50px" height="50px" /></a></div>'
+				           +' <div class="lyinfo">'
+				            +'  <div class="lyname"><span class="myname"><a href="#">'+result.list[i].userinfo.loginName+'</a></span></div>'
+				            +'  <div class="gxqm">'+result.list[i].content+'</div>'
+				            +'  <div class="reque">'+result.list[i].updateDateStr+'</div>'
+				          + ' </div>'
+				          +'</li>';
+				          $(".pllist").append(str);
+				}
+				
+			},
+			error:function(a,b,c){
+				alert(a+"+"+b+"+"+c)
+			}
+			
+		})
 		
 	}
 	$("#sch").click(function(){
@@ -391,6 +353,107 @@ demo.onmouseout=function() {MyMar=setInterval(Marquee,speed)}
 	}
 	$("#showmsg").click(function(){
 		$("#showmsg").hide();
+	})
+</script>
+
+<script>
+	$(function(){
+		var videoid = ${video.id};
+		$.ajax({
+			url:"<%=contextPath %>/getvoidcommit?forward="+videoid,
+			dataType:"json",
+			async:false,
+			success:function(data){
+// 				alert(data.comms.list);
+				var result = data.comms;
+				for(var i=0;i<result.totalPage;i++){
+					var s = "<a href='javascript:void(0)' onclick='next("+(i+1)+","+result.page+","+result.resultCount+")'>"+(i+1)+"</a>";
+					if(i+1==$("#page").val()){
+						 s = "<a href='javascript:void(0)' class='on' onclick='next("+(i+1)+","+result.page+","+result.resultCount+")'>"+(i+1)+"</a>";
+					}
+					$(".num").append(s);
+					  
+			  		$("#resultCount").val(result.resultCount);
+				}
+				for(var i=0;i<result.list.length;i++){
+					
+// 					alert(result.list[i].userinfo)
+					
+					var str = ' <li>'
+				           +' <div class="lyimg"><a href="#"><img src="<%=contextStatic %>/'+result.list[i].userinfo.headAddress+'" width="50px" height="50px" /></a></div>'
+				           +' <div class="lyinfo">'
+				            +'  <div class="lyname"><span class="myname"><a href="#">'+result.list[i].userinfo.loginName+'</a></span></div>'
+				            +'  <div class="gxqm">'+result.list[i].content+'</div>'
+				            +'  <div class="reque">'+result.list[i].updateDateStr+'</div>'
+				          + ' </div>'
+				          +'</li>';
+				          $(".pllist").append(str);
+				        
+				}
+				
+			},
+			error:function(a,b,c){
+				alert(a+"+"+b+"+"+c)
+			}
+			
+		})
+		
+		
+	})
+	$("#btn").click(function(){
+		var textarea = $("#textarea").val();
+		var videoid = ${video.id};
+		$.ajax({
+			url:"<%=contextPath %>/addvoidcommit?forward="+videoid+"&content="+textarea,
+			dataType:"json",
+			async:false,
+			success:function(data){
+				$(".pllist").html("");
+				$(".num").html("");
+				$.ajax({
+					url:"<%=contextPath %>/getvoidcommit?forward="+videoid,
+					dataType:"json",
+					async:false,
+					success:function(data){
+//		 				alert(data.comms.list);
+						var result = data.comms;
+						for(var i=0;i<result.totalPage;i++){
+							var s = "<a href='javascript:void(0)' onclick='next("+(i+1)+","+result.page+","+result.resultCount+")'>"+(i+1)+"</a>";
+							if(i+1==$("#page").val()){
+								 s = "<a href='javascript:void(0)' class='on' onclick='next("+(i+1)+","+result.page+","+result.resultCount+")'>"+(i+1)+"</a>";
+							}
+							$(".num").append(s);
+							  
+					  		$("#resultCount").val(result.resultCount);
+						}
+						for(var i=0;i<result.list.length;i++){
+							
+//		 					alert(result.list[i].userinfo)
+							
+							var str = ' <li>'
+						           +' <div class="lyimg"><a href="#"><img src="<%=contextStatic %>/'+result.list[i].userinfo.headAddress+'" width="50px" height="50px" /></a></div>'
+						           +' <div class="lyinfo">'
+						            +'  <div class="lyname"><span class="myname"><a href="#">'+result.list[i].userinfo.loginName+'</a></span></div>'
+						            +'  <div class="gxqm">'+result.list[i].content+'</div>'
+						            +'  <div class="reque">'+result.list[i].updateDateStr+'</div>'
+						          + ' </div>'
+						          +'</li>';
+						          $(".pllist").append(str);
+						        
+						}
+						
+					},
+					error:function(a,b,c){
+						alert(a+"+"+b+"+"+c)
+					}
+					
+				})
+				},
+				error:function(a,b,c){
+					alert(a+"+"+b+"+"+c)
+				}
+			
+			})
 	})
 </script>
 </body>

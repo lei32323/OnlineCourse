@@ -22,7 +22,7 @@ public class loginInterceptor implements  HandlerInterceptor   {
 		System.out.println(request.getRequestURL());
 		if(user==null){//不是的就跳转到登陆页面
 //			request.getRequestDispatcher("/WEB-INF/view/index.jsp").forward(request, response);  
-			response.sendRedirect(request.getContextPath()+"/login?isok=1");
+			response.sendRedirect(request.getContextPath()+"/school?isok=1");
 			return false;
 		}
 		// TODO Auto-generated method stub

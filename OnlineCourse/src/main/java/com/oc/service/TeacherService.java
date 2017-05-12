@@ -16,4 +16,9 @@ public class TeacherService {
 	public List<Teacher> findAll(Teacher t){
 		return   teacherMapper.selectByExample(t);
 	}
+
+	public void add(Teacher t) {
+		// TODO Auto-generated method stub
+		teacherMapper.insertSelective(t);
+	}
 }

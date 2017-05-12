@@ -58,4 +58,9 @@ public class CourseVideoService {
 		return courseVideoMapper.selectByPrimaryKey(id);
 	}
 
+	public void update(CourseVideo courseVideo) {
+		// TODO Auto-generated method stub
+		courseVideoMapper.updateByPrimaryKeySelective(courseVideo);
+	}
+
 }

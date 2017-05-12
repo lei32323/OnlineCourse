@@ -38,7 +38,25 @@ EvPNG.fix('img,.content,.svc-payment,.svc-gathering,.svc-weg,.svc-tx,.svc-credit
 </form>
 </div>
 </div> 
-</div> </div></div>
+</div> <div id="pop1" class="pop" style="display:none"> 
+<div class="pop_head"><a href="javascript:void(0);" onclick="hideB()">关闭</a></div> 
+<div class="pop_body">
+<h1>用户登陆</h1>
+<div class="zhuce">
+ <form action="<%=contextPath %>/login" method="post" id="loginForm">
+	<input type="text" class="inputr" value="用户名" name= "loginName" onFocus="this.value='';" onBlur="if(this.value==''){this.value='请输入用户名';}" />
+	<input type="password" class="inputb" value="密码" onFocus="this.value='';" name="loginpwd" onBlur="if(this.value==''){this.value='请输入密码';}" />
+	<select name="type"  class="inputr"  style="width:335px" >
+					<option value="0" >学生</option>
+					<option value="1" >教师</option>
+					<option value="2" >学校管理员</option>
+			</select>
+	<div class="dlk"><a href="#" class="regist" id="login">登陆</a></div>
+</form>
+</div></div>
+</div>
+</div>
+</div>
 </c:if>
 
 <!--快捷导航-->
@@ -57,9 +75,7 @@ EvPNG.fix('img,.content,.svc-payment,.svc-gathering,.svc-weg,.svc-tx,.svc-credit
       <!--菜单导航-->
       <div class="topnavmenu">
         <div class="nav">
-          <ul>
-            <li><a href="<%=contextPath %>/login" >首页</a></li>
-            <li><a href="中学时代.html">翻转课堂</a></li>
+			<ul>
              <li><a href="<%=contextPath %>/school">大学时代</a></li>
             <li><a href="<%=contextPath %>/userinfo" class="on">个人中心</a></li>
           </ul>
@@ -108,8 +124,6 @@ EvPNG.fix('img,.content,.svc-payment,.svc-gathering,.svc-weg,.svc-tx,.svc-credit
     <ul class="menu3">
       <li><a href="#"><em>视频管理</em></a></li>
       <div class="menubox">
-        <p><a href="个人中心-上传视频.html" >上传视频</a></p>
-        <p><a href="#" >我的收藏</a></p>
         <p><a href="个人中心-观看记录.html" >观看记录</a></p>
       </div>
     </ul>
@@ -119,15 +133,7 @@ EvPNG.fix('img,.content,.svc-payment,.svc-gathering,.svc-weg,.svc-tx,.svc-credit
         <p><a href="<%=contextPath %>/tomynotelist" >我的笔记</a></p>
         <p><a href="<%=contextPath %>/tomoodlist" >心情日志</a></p>
         <p><a href="<%=contextPath %>/toaddquestion" style="color:#e10083">我的提问</a></p>
-             <p><a href="<%=contextPath %>/myanswerlist" >我的回答</a></p>
-        <p><a href="个人中心-留言.html" >留言板</a></p>
-      </div>
-    </ul>
-    <ul class="menu5">
-      <li><a href="个人中心-我的视频.html"><em>我的课程</em></a></li>
-      <div class="menubox">
-        <p><a href="个人中心-我的视频.html" >学习中视频</a></p>
-        <p><a href="个人中心-我的视频.html" >猜你喜欢</a></p>
+        <p><a href="<%=contextPath %>/myanswerlist" >我的回答</a></p>
       </div>
     </ul>
   </div>
@@ -144,9 +150,7 @@ EvPNG.fix('img,.content,.svc-payment,.svc-gathering,.svc-weg,.svc-tx,.svc-credit
 	      <h2><a href="#">2480</a> 位老师 <a href="#">12797364</a> 位目友为您在线解答</h2>
 	    </div>
 	    <textarea name="doubt" class="input4" style="width:838px; height:340px;"></textarea>
-	   
-	    <div class="twform">
-	      
+	    <div class="twform">      
 	      <input type="submit" value="提交问题" class="input13" style="float:right"/>
 	    </div>
 	  </div>
@@ -156,43 +160,7 @@ EvPNG.fix('img,.content,.svc-payment,.svc-gathering,.svc-weg,.svc-tx,.svc-credit
 <div class="clear"></div>
 <div id="footer">
   <div class="links">
-    <div class="linkpic">
-      <h1>合作单位</h1>
-      <div class="picshow">
-        <div id="demo" style="width:1017px; height:49px; overflow:hidden;">
-          <table border=0 align=center cellpadding=0 cellspacing=0 cellspace=0 >
-            <tr>
-              <td valign=top  id=marquePic1><table width='100%' border='0' cellspacing='0'>
-                  <tr>
-                    <td align=center><a href="#" target="_blank"><img src="<%=contextStatic %>/images/link1.jpg" /></a></td>
-                    <td align=center><a href="#" target="_blank"><img src="<%=contextStatic %>/images/link2.jpg" /></a></td>
-                    <td align=center><a href="#" target="_blank"><img src="<%=contextStatic %>/images/link3.jpg" /></a></td>
-                    <td align=center><a href="#" target="_blank"><img src="<%=contextStatic %>/images/link4.jpg" /></a></td>
-                    <td align=center><a href="#" target="_blank"><img src="<%=contextStatic %>/images/link5.jpg" /></a></td>
-                    <td align=center><a href="#" target="_blank"><img src="<%=contextStatic %>/images/link6.jpg" /></a></td>
-                    <td align=center><a href="#" target="_blank"><img src="<%=contextStatic %>/images/link7.jpg" /></a></td>
-                  </tr>
-                </table></td>
-              <td id=marquePic2 valign=top></td>
-            </tr>
-          </table>
-        </div>
-        <script type="text/javascript">
-var speed=50 
-marquePic2.innerHTML=marquePic1.innerHTML 
-function Marquee(){ 
-if(demo.scrollLeft>=marquePic1.scrollWidth){ 
-demo.scrollLeft=0 
-}else{ 
-demo.scrollLeft++ 
-} 
-} 
-var MyMar=setInterval(Marquee,speed) 
-demo.onmouseover=function() {clearInterval(MyMar)} 
-demo.onmouseout=function() {MyMar=setInterval(Marquee,speed)} 
-</script>
-      </div>
-    </div>
+    
     <div class="clear"></div>
     <!--合作伙伴-->
     <div class="linktext">
@@ -201,11 +169,11 @@ demo.onmouseout=function() {MyMar=setInterval(Marquee,speed)}
     </div>
   </div>
   <div class="copyright">
-    <div class="Navigation"><a href="#">关于目课</a><a href="#">合作伙伴</a><a href="#">营销中心</a><a href="#">廉正举报</a><a href="#">联系客服</a><a href="#">开放平台</a><a href="#">诚征英才</a><a href="#">联系我们</a><a href="#">网站地图</a><a href="#">法律声明</a></div>
-    <div class="copy">Copyright © 2014 MYCLASS.C0M. All Rights Reserved. Designed by:<a href="http://www.wanhu.cn">Wanhu</a><br />
+    <div class="Navigation"><a href="#">关于我们</a><a href="#">合作伙伴</a><a href="#">营销中心</a><a href="#">廉正举报</a><a href="#">联系客服</a><a href="#">开放平台</a><a href="#">诚征英才</a><a href="#">联系我们</a><a href="#">网站地图</a><a href="#">法律声明</a></div>
+    <div class="copy">Copyright © 2014 MYCLASS.C0M. All Rights Reserved. Designed by:<a href="#">Wanhu</a><br />
       目课网 版权所有 目课网经营许可证<br />
-      <font class="f_red">当前在线人数：<b>154588</b> 人</font></div>
   </div>
+</div>
 </div>
 <script>
 	$("#showmsg").hide();

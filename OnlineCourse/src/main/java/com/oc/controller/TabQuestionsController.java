@@ -40,9 +40,12 @@ public class TabQuestionsController {
 	//添加提问
 	@RequestMapping("addquestion")
 	public String addquestion(Model model,HttpServletRequest request,TabQuestions tabQuestions){
+		//获取当前用户
 		UserInfo userInfo = (UserInfo) request.getSession().getAttribute("user");
+		//设置用户
 		tabQuestions.setUserId(userInfo.getId());
 		tabQuestions.setUpdateDate(new Date());
+		//添加提问
 		tabQuestionsService.addquestion(tabQuestions);
 		return "toaddquestion";
 	}
@@ -107,13 +110,14 @@ public class TabQuestionsController {
 	//回答问题
 	@RequestMapping("addanswers")
 	public String addanswers(Model model,HttpServletRequest request,QuestionsAnswer qa){
+		//获取当前登录用户
 		UserInfo userInfo = (UserInfo) request.getSession().getAttribute("user");
 		qa.setAnswerUserid(userInfo.getId());
 		qa.setAnswerName(userInfo.getLoginName());
 		qa.setAnswerDate(new Date());
 		qa.setQuestionId(qa.getAnswerId());
+		//添加答案
 		questionsAnswerService.add(qa);
-		
 		return "redirect:/hdlist?id="+qa.getQuestionId();
 	}
 }

@@ -43,7 +43,7 @@ EvPNG.fix('img,.content,.svc-payment,.svc-gathering,.svc-weg,.svc-tx,.svc-credit
 	<div class="member"><div class="tuxiang"><img src="<%=contextPath %>/${user.headAddress}" width="35" height="35" /></div><div class="hyname"><a href="<%=contextPath %>/touserinfo">${user.loginName }</a></div><div class="hyname"><a href="<%=contextPath %>/exitLogin">注销</a></div></div>
 </c:if>
 <c:if test="${msg!='1' || msg ==null }">
-<div class="member"><div class="huiyuan"><ul><li class="hy2"><a href="javascript:void(0);" onclick="showA();">注册</a></li></ul>		  				  <!--注册登录隐藏--->
+<div class="member"><div class="huiyuan"><ul><li class="hy2"><a href="javascript:void(0);" onclick="showA();">注册</a></li><li class="hy2"><a href="javascript:void(0);" onclick="showB();">登陆</a></li></ul>		  				  <!--注册登录隐藏--->
 	  <div id="pop" class="pop" style="display:none"> 
 <div class="pop_head"><a href="javascript:void(0);" onclick="hideA()">关闭</a></div> 
 <div class="pop_body">
@@ -58,11 +58,32 @@ EvPNG.fix('img,.content,.svc-payment,.svc-gathering,.svc-weg,.svc-tx,.svc-credit
 					<option value="1" >教师</option>
 					<option value="2" >学校管理员</option>
 			</select>
-	<div class="dlk"><a href="#" class="regist" id="regist">注册</a></div>
+	<div class="dlk"><a href="javascript:void(0)" class="regist" id="regist">注册</a></div>
 </form>
 </div>
 </div> 
-</div> </div></div>
+</div>
+
+<div id="pop1" class="pop" style="display:none"> 
+<div class="pop_head"><a href="javascript:void(0);" onclick="hideB()">关闭</a></div> 
+<div class="pop_body">
+<h1>用户登陆</h1>
+<div class="zhuce">
+ <form action="<%=contextPath %>/login" method="post" id="loginForm">
+	<input type="text" class="inputr" value="用户名" name= "loginName" onFocus="this.value='';" onBlur="if(this.value==''){this.value='请输入用户名';}" />
+	<input type="password" class="inputb" value="密码" onFocus="this.value='';" name="loginpwd" onBlur="if(this.value==''){this.value='请输入密码';}" />
+	<select name="type"  class="inputr"  style="width:335px" >
+					<option value="0" >学生</option>
+					<option value="1" >教师</option>
+					<option value="2" >学校管理员</option>
+			</select>
+	<div class="dlk"><a href="#" class="regist" id="login">登陆</a></div>
+</form>
+</div>
+</div> 
+</div>
+
+ </div></div>
 </c:if>
 
 <!--快捷导航-->
@@ -261,7 +282,7 @@ EvPNG.fix('img,.content,.svc-payment,.svc-gathering,.svc-weg,.svc-tx,.svc-credit
 					<option value="1" <c:if test="${user.type==1 }" >selected='selected'</c:if>>教师</option>
 					<option value="2" <c:if test="${user.type==2 }" >selected='selected'</c:if>>学校管理员</option>
 			</select></div>
-	        <div class="tiyan"><a href="javascript:void(0)" id="login">登陆</a></div>
+<!-- 	        <div class="tiyan"><a href="javascript:void(0)" id="login">登陆</a></div> -->
 	      </div>
      </form>
      

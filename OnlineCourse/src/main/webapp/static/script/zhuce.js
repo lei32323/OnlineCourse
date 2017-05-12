@@ -37,13 +37,17 @@ o.style.display = "none";
 EX.removeEvent.call(document,'click',hide);
 }
 
+
+
+
 document.getElementById('pop1').onclick = EX.stop;
 var url = '#'; 
 function showB(){ 
+
 var o = document.getElementById('pop1'); 
 o.style.display = ""; 
-var a = document.getElementById('pop');
-a.style.display = "none"; 
+var a = document.getElementById('pop1');
+//a.style.display = "none"; 
 } 
 function hideB(){ 
 var o = document.getElementById('pop1'); 

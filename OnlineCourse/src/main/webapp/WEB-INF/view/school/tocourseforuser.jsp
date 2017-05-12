@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>安徽慕界网络科技有限公司</title>
+<title>网络课堂</title>
 <link href="<%=contextStatic %>/css/whir_dx.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="<%=contextStatic %>/script/jquery-1.11.1.min.js"></script> 
 <script type="<%=contextStatic %>/text/javascript" src="script/column.js"></script>
@@ -19,9 +19,9 @@ EvPNG.fix('img,.content,.svc-payment,.svc-gathering,.svc-weg,.svc-tx,.svc-credit
 <!--头部-->
 <div id="head">
   <div class="top">
-    <div class="logo"><a href="#"><img src="<%=contextStatic %>/images/home/b_logo.jpg" /></a></div>
+<%--     <div class="logo"><a href="#"><img src="<%=contextStatic %>/images/home/b_logo.jpg" /></a></div> --%>
     <div class="title">
-      <h1>企业培训</h1>
+      <h1>网络课堂</h1>
     </div>
     <div class="nav">
       <ul>
@@ -34,12 +34,19 @@ EvPNG.fix('img,.content,.svc-payment,.svc-gathering,.svc-weg,.svc-tx,.svc-credit
       <input type="image" src="<%=contextStatic %>/images/home/btn.jpg" class="btn" />
     </div>
     <div class="hyinfo">
+      <c:if test="${user!=null }">
       <ul>
         <li class="hy1"><a href="#" class="on"><img src="<%=contextPath %>/${user.headAddress}" /></a>
-          <div class="subbox"><span></span><a href="#" >我的课程</a> <a href="<%=contextPath %>/toschoolinfo" >设置</a> </div>
-        </li>
-        <li class="hy2"><a href="#">退出</a></li>
+           <div class="subbox"><span></span><a href="#" >我的课程</a> <a href="<%=contextPath %>/userinfo" >个人信息</a>  <a href="<%=contextPath %>/toschoolinfo" >设置</a> </div>
+          </li>
+        <li class="hy2"><a href="<%=contextPath %>/exitLogin">退出</a></li>
       </ul>
+      </c:if>
+      <c:if test="${user==null }">
+      	<ul>
+        	<li class="hy2"><a href="<%=contextPath %>/userinfo">登陆</a></li>
+      	</ul>
+      </c:if>
       <script type="text/javascript">
    
  $(document).ready(function(){
@@ -69,7 +76,7 @@ $(this).find('.subbox').css("display","none");
 <div id="container">
   <div class="kcjs">
     <div class="left750">
-      <div class="dxlogo"><a href="#"><img src="<%=contextPath %>/${school.imagePath}" /></a></div>
+      <div class="dxlogo"><a href="#"><img src="<%=contextPath %>/${school.imagePath}" width="295px" height="75px"/></a></div>
       <!--教程简介-->
       <div class="dxinfo">
         <h1>${course.name }</h1>
@@ -83,7 +90,7 @@ $(this).find('.subbox').css("display","none");
       </div>
       <ul class="list">
         <li>
-          <div class="lsimg"><img src="${course.teacher.userinfo.headAddress }" /></div>
+          <div class="lsimg"><img src="${course.teacher.userinfo.headAddress }" width="88px" height="82px"/></div>
             <div class="lsname" style="text-align: center;">${course.teacher.name }</div>
         </li>
       </ul>
@@ -92,13 +99,12 @@ $(this).find('.subbox').css("display","none");
   <!--课程描述-->
   <div class="kcms">
     <div class="left248">
-      <div style="margin-bottom:20px;"><a href="#"><img src="images/home/ad.jpg" /></a></div>
+      <div style="margin-bottom:20px;"><a href="#"><img src="images/home/ad.jpg" width="248px" height="131px"/></a></div>
       <!--导航-->
       <div class="menu">
         <ul>
           <li><a href="<%=contextPath %>/tocourseforuser?id=${course.id}" class="on">课程介绍</a></li>
           <li><a href="<%=contextPath %>/tocoursestudy?courseId=${course.id}">课程学习</a></li>
-          <li><a href="#">在线评测</a></li>
         </ul>
       </div>
     </div>
@@ -128,43 +134,7 @@ $(this).find('.subbox').css("display","none");
 <div class="clear"></div>
 <div id="footer">
   <div class="links">
-    <div class="linkpic">
-      <h1>合作单位</h1>
-      <div class="picshow">
-        <div id="demo" style="width:1017px; height:49px; overflow:hidden;">
-          <table border=0 align=center cellpadding=0 cellspacing=0 cellspace=0 >
-            <tr>
-              <td valign=top  id=marquePic1><table width='100%' border='0' cellspacing='0'>
-                  <tr>
-                    <td align=center><a href="#" target="_blank"><img src="<%=contextStatic %>/images/link1.jpg" /></a></td>
-                    <td align=center><a href="#" target="_blank"><img src="<%=contextStatic %>/images/link2.jpg" /></a></td>
-                    <td align=center><a href="#" target="_blank"><img src="<%=contextStatic %>/images/link3.jpg" /></a></td>
-                    <td align=center><a href="#" target="_blank"><img src="<%=contextStatic %>/images/link4.jpg" /></a></td>
-                    <td align=center><a href="#" target="_blank"><img src="<%=contextStatic %>/images/link5.jpg" /></a></td>
-                    <td align=center><a href="#" target="_blank"><img src="<%=contextStatic %>/images/link6.jpg" /></a></td>
-                    <td align=center><a href="#" target="_blank"><img src="<%=contextStatic %>/images/link7.jpg" /></a></td>
-                  </tr>
-                </table></td>
-              <td id=marquePic2 valign=top></td>
-            </tr>
-          </table>
-        </div>
-        <script type="text/javascript">
-var speed=50 
-marquePic2.innerHTML=marquePic1.innerHTML 
-function Marquee(){ 
-if(demo.scrollLeft>=marquePic1.scrollWidth){ 
-demo.scrollLeft=0 
-}else{ 
-demo.scrollLeft++ 
-} 
-} 
-var MyMar=setInterval(Marquee,speed) 
-demo.onmouseover=function() {clearInterval(MyMar)} 
-demo.onmouseout=function() {MyMar=setInterval(Marquee,speed)} 
-</script>
-      </div>
-    </div>
+    
     <div class="clear"></div>
     <!--合作伙伴-->
     <div class="linktext">
@@ -173,11 +143,11 @@ demo.onmouseout=function() {MyMar=setInterval(Marquee,speed)}
     </div>
   </div>
   <div class="copyright">
-    <div class="Navigation"><a href="#">关于目课</a><a href="#">合作伙伴</a><a href="#">营销中心</a><a href="#">廉正举报</a><a href="#">联系客服</a><a href="#">开放平台</a><a href="#">诚征英才</a><a href="#">联系我们</a><a href="#">网站地图</a><a href="#">法律声明</a></div>
-    <div class="copy">Copyright © 2014 MYCLASS.C0M. All Rights Reserved. Designed by:<a href="http://www.wanhu.cn">Wanhu</a><br />
+    <div class="Navigation"><a href="#">关于我们</a><a href="#">合作伙伴</a><a href="#">营销中心</a><a href="#">廉正举报</a><a href="#">联系客服</a><a href="#">开放平台</a><a href="#">诚征英才</a><a href="#">联系我们</a><a href="#">网站地图</a><a href="#">法律声明</a></div>
+    <div class="copy">Copyright © 2014 MYCLASS.C0M. All Rights Reserved. Designed by:<a href="#">Wanhu</a><br />
       目课网 版权所有 目课网经营许可证<br />
-      <font class="f_red">当前在线人数：<b>154588</b> 人</font></div>
   </div>
+</div>
 </div>
 <script>
 	if($("#content").val()==""){

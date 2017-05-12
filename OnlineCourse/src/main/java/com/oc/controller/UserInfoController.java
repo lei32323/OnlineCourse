@@ -10,9 +10,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.oc.entity.Teacher;
 import com.oc.entity.UserInfo;
 import com.oc.entity.UserMood;
 import com.oc.entity.UserWords;
+import com.oc.service.TeacherService;
 import com.oc.service.UserInfoService;
 import com.oc.service.UserMoodService;
 import com.oc.service.UserWordsService;
@@ -30,6 +32,9 @@ public class UserInfoController {
 
 		@Autowired
 		private UserWordsService userWordsService;
+		
+		@Autowired
+		private TeacherService teacherService;
 		
 		@RequestMapping("login")
 		public String login(Model model,HttpServletRequest request,UserInfo userinfo,String isok){
@@ -69,7 +74,7 @@ public class UserInfoController {
 			//获取热门提问
 			
 			
-			return "index";
+			return "upduserinfo";
 		}
 		
 		//用户退出
@@ -84,7 +89,7 @@ public class UserInfoController {
 			}
 			session.removeAttribute("user");
 			session.removeAttribute("msg");
-			return "index";
+			return "upduserinfo";
 		}
 		
 		//regin
@@ -93,10 +98,16 @@ public class UserInfoController {
 			userinfo.setIslogin(1);
 			boolean isok = userInfoService.regin(userinfo);
 			UserInfo user = userInfoService.findUserInfo(userinfo);
+			if(user.getType()==1){
+				Teacher t = new Teacher();
+				t.setName(user.getLoginName()+"老师");
+				t.setUserinfo(user);
+				teacherService.add(t);
+			}
 			if(isok){
 				request.getSession().setAttribute("user", user);
 			}
-			return "index";
+			return "upduserinfo";
 		}
 		
 		//个人信息
